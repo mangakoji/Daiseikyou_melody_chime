@@ -603,11 +603,11 @@ set_instance_assignment -name PCI_IO ON -to CLK_USR_i
 
 # Project files Assignments
 # ==========================
-set_global_assignment -name VERILOG_FILE TOP.v
-set_global_assignment -name VHDL_FILE melodychime_top.vhd
-set_global_assignment -name VHDL_FILE melodychime_sg.vhd
-set_global_assignment -name VHDL_FILE melodychime_seq.vh
-set_global_assignment -name SDC_FILE BeMicroMAX10.sdc
+set_global_assignment -name VERILOG_FILE RTL/TOP.v
+set_global_assignment -name VHDL_FILE RTL/melodychime_top.vhd
+set_global_assignment -name VHDL_FILE RTL/melodychime_sg.vhd
+set_global_assignment -name VHDL_FILE RTL/melodychime_seq.vhd
+set_global_assignment -name SDC_FILE constraint/BeMicroMAX10.sdc
 
 
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

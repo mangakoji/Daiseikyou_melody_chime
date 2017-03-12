@@ -1,6 +1,6 @@
 Analysis & Synthesis report for melodychime_top
-Sun Mar 15 02:28:33 2015
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Sun Mar 12 14:08:21 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -15,54 +15,59 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |melodychime_top
- 11. Parameter Settings for User Entity Instance: melodychime_seq:U_SEQ
- 12. Parameter Settings for User Entity Instance: melodychime_sg:U_SG0
- 13. Parameter Settings for User Entity Instance: melodychime_sg:U_SG1
- 14. Port Connectivity Checks: "melodychime_sg:U_SG1"
- 15. Port Connectivity Checks: "melodychime_sg:U_SG0"
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top
+ 11. Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ
+ 12. Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_sg:U_SG0
+ 13. Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_sg:U_SG1
+ 14. Port Connectivity Checks: "melodychime_top:u_melodychime_top|melodychime_sg:U_SG1"
+ 15. Port Connectivity Checks: "melodychime_top:u_melodychime_top|melodychime_sg:U_SG0"
+ 16. Port Connectivity Checks: "melodychime_top:u_melodychime_top"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
-+------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 15 02:28:33 2015      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                      ; melodychime_top                            ;
-; Top-level Entity Name              ; melodychime_top                            ;
-; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 255                                        ;
-;     Total combinational functions  ; 245                                        ;
-;     Dedicated logic registers      ; 125                                        ;
-; Total registers                    ; 125                                        ;
-; Total pins                         ; 11                                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
-+------------------------------------+--------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Mar 12 14:08:21 2017       ;
+; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                      ; melodychime_top                             ;
+; Top-level Entity Name              ; TOP                                         ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 255                                         ;
+;     Total combinational functions  ; 245                                         ;
+;     Dedicated logic registers      ; 125                                         ;
+; Total registers                    ; 125                                         ;
+; Total pins                         ; 206                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -70,16 +75,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; melodychime_top    ; melodychime_top    ;
-; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Device                                                                     ; 10M08DAF484C8GES   ;                    ;
+; Top-level entity name                                                      ; TOP                ; melodychime_top    ;
+; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; HDL message level                                                          ; Level3             ; Level2             ;
+; Analysis & Synthesis Message Level                                         ; High               ; Medium             ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
 ; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
 ; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
 ; Preserve fewer node names                                                  ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
 ; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                   ; Auto               ; Auto               ;
@@ -132,8 +139,7 @@ applicable agreement for further details.
 ; Report Connectivity Checks                                                 ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
 ; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
 ; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
@@ -145,10 +151,8 @@ applicable agreement for further details.
 ; Synthesis Effort                                                           ; Auto               ; Auto               ;
 ; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
 ; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
 ; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
 ; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-; Synthesis Seed                                                             ; 1                  ; 1                  ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
@@ -157,69 +161,73 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                     ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                              ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
-; melodychime_top.vhd              ; yes             ; User VHDL File  ; C:/PROJECT/cq_viola/cqext_melodychime/melodychime_top.vhd ;         ;
-; melodychime_sg.vhd               ; yes             ; User VHDL File  ; C:/PROJECT/cq_viola/cqext_melodychime/melodychime_sg.vhd  ;         ;
-; melodychime_seq.vhd              ; yes             ; User VHDL File  ; C:/PROJECT/cq_viola/cqext_melodychime/melodychime_seq.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
+; RTL/TOP.v                        ; yes             ; User Verilog HDL File  ; D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v               ;         ;
+; RTL/melodychime_top.vhd          ; yes             ; User VHDL File         ; D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd ;         ;
+; RTL/melodychime_sg.vhd           ; yes             ; User VHDL File         ; D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_sg.vhd  ;         ;
+; RTL/melodychime_seq.vhd          ; yes             ; User VHDL File         ; D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_seq.vhd ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 255       ;
-;                                             ;           ;
-; Total combinational functions               ; 245       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 59        ;
-;     -- 3 input functions                    ; 61        ;
-;     -- <=2 input functions                  ; 125       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 115       ;
-;     -- arithmetic mode                      ; 130       ;
-;                                             ;           ;
-; Total registers                             ; 125       ;
-;     -- Dedicated logic registers            ; 125       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 11        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 125       ;
-; Total fan-out                               ; 1209      ;
-; Average fan-out                             ; 3.08      ;
-+---------------------------------------------+-----------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 255             ;
+;                                             ;                 ;
+; Total combinational functions               ; 245             ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 60              ;
+;     -- 3 input functions                    ; 61              ;
+;     -- <=2 input functions                  ; 124             ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 115             ;
+;     -- arithmetic mode                      ; 130             ;
+;                                             ;                 ;
+; Total registers                             ; 125             ;
+;     -- Dedicated logic registers            ; 125             ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 206             ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; CLK_50M_i~input ;
+; Maximum fan-out                             ; 125             ;
+; Total fan-out                               ; 1441            ;
+; Average fan-out                             ; 1.54            ;
++---------------------------------------------+-----------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
-; |melodychime_top           ; 245 (51)          ; 125 (33)     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |melodychime_top                       ; work         ;
-;    |melodychime_seq:U_SEQ| ; 62 (62)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |melodychime_top|melodychime_seq:U_SEQ ; work         ;
-;    |melodychime_sg:U_SG0|  ; 66 (66)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |melodychime_top|melodychime_sg:U_SG0  ; work         ;
-;    |melodychime_sg:U_SG1|  ; 66 (66)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |melodychime_top|melodychime_sg:U_SG1  ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                          ; Entity Name     ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------+-----------------+--------------+
+; |TOP                                   ; 245 (2)             ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 206  ; 0            ; 0          ; |TOP                                                         ; TOP             ; work         ;
+;    |melodychime_top:u_melodychime_top| ; 243 (49)            ; 125 (33)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top                       ; melodychime_top ; work         ;
+;       |melodychime_seq:U_SEQ|          ; 62 (62)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ ; melodychime_seq ; work         ;
+;       |melodychime_sg:U_SG0|           ; 66 (66)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG0  ; melodychime_sg  ; work         ;
+;       |melodychime_sg:U_SG1|           ; 66 (66)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG1  ; melodychime_sg  ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -231,73 +239,73 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 125   ;
 ; Number of registers using Synchronous Clear  ; 4     ;
 ; Number of registers using Synchronous Load   ; 47    ;
-; Number of registers using Asynchronous Clear ; 119   ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 87    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |melodychime_top|melodychime_seq:U_SEQ|scorecount[0]   ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |melodychime_top|melodychime_sg:U_SG1|env_count_reg[2] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |melodychime_top|melodychime_sg:U_SG0|env_count_reg[2] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP|melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|scorecount[1]   ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG1|env_count_reg[2] ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG0|env_count_reg[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |melodychime_top ;
-+----------------+-------+--------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                   ;
-+----------------+-------+--------------------------------------------------------+
-; CLOCK_EDGE     ; '1'   ; Enumerated                                             ;
-; RESET_LEVEL    ; '0'   ; Enumerated                                             ;
-+----------------+-------+--------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; clock_edge     ; 1     ; Unsigned Binary                                       ;
+; reset_level    ; 0     ; Unsigned Binary                                       ;
++----------------+-------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: melodychime_seq:U_SEQ ;
-+----------------+-------+-------------------------------------------+
-; Parameter Name ; Value ; Type                                      ;
-+----------------+-------+-------------------------------------------+
-; clock_edge     ; '1'   ; Enumerated                                ;
-; reset_level    ; '0'   ; Enumerated                                ;
-; tempo_tc       ; 357   ; Signed Integer                            ;
-+----------------+-------+-------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; clock_edge     ; '1'   ; Enumerated                                                                  ;
+; reset_level    ; '0'   ; Enumerated                                                                  ;
+; tempo_tc       ; 357   ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: melodychime_sg:U_SG0 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; clock_edge     ; '1'   ; Enumerated                               ;
-; reset_level    ; '0'   ; Enumerated                               ;
-; envelope_tc    ; 28000 ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_sg:U_SG0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; clock_edge     ; '1'   ; Enumerated                                                                 ;
+; reset_level    ; '0'   ; Enumerated                                                                 ;
+; envelope_tc    ; 28000 ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: melodychime_sg:U_SG1 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; clock_edge     ; '1'   ; Enumerated                               ;
-; reset_level    ; '0'   ; Enumerated                               ;
-; envelope_tc    ; 28000 ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_sg:U_SG1 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; clock_edge     ; '1'   ; Enumerated                                                                 ;
+; reset_level    ; '0'   ; Enumerated                                                                 ;
+; envelope_tc    ; 28000 ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "melodychime_sg:U_SG1"                                                                         ;
+; Port Connectivity Checks: "melodychime_top:u_melodychime_top|melodychime_sg:U_SG1"                                       ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port           ; Type   ; Severity ; Details                                                                             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -306,12 +314,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "melodychime_sg:U_SG0"                                                                         ;
+; Port Connectivity Checks: "melodychime_top:u_melodychime_top|melodychime_sg:U_SG0"                                       ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port           ; Type   ; Severity ; Details                                                                             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; wave_out[6..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "melodychime_top:u_melodychime_top" ;
++-----------+--------+----------+-------------------------------+
+; Port      ; Type   ; Severity ; Details                       ;
++-----------+--------+----------+-------------------------------+
+; reset     ; Input  ; Info     ; Stuck at VCC                  ;
+; aud_r_out ; Output ; Info     ; Explicitly unconnected        ;
++-----------+--------+----------+-------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 206                         ;
+; cycloneiii_ff         ; 125                         ;
+;     ENA               ; 37                          ;
+;     ENA SCLR          ; 4                           ;
+;     ENA SLD           ; 46                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 37                          ;
+; cycloneiii_io_obuf    ; 153                         ;
+; cycloneiii_lcell_comb ; 246                         ;
+;     arith             ; 130                         ;
+;         2 data inputs ; 94                          ;
+;         3 data inputs ; 36                          ;
+;     normal            ; 116                         ;
+;         0 data inputs ; 5                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 25                          ;
+;         4 data inputs ; 60                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.60                        ;
+; Average LUT depth     ; 2.27                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -319,7 +366,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -327,34 +374,296 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Mar 15 02:28:31 2015
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Sun Mar 12 14:07:58 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off melodychime_top -c melodychime_top
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
-Info (12021): Found 2 design units, including 1 entities, in source file melodychime_top.vhd
-    Info (12022): Found design unit 1: melodychime_top-RTL
-    Info (12023): Found entity 1: melodychime_top
-Info (12021): Found 2 design units, including 1 entities, in source file melodychime_sg.vhd
-    Info (12022): Found design unit 1: melodychime_sg-RTL
-    Info (12023): Found entity 1: melodychime_sg
-Info (12021): Found 2 design units, including 1 entities, in source file melodychime_seq.vhd
-    Info (12022): Found design unit 1: melodychime_seq-RTL
-    Info (12023): Found entity 1: melodychime_seq
-Info (12127): Elaborating entity "melodychime_top" for the top level hierarchy
-Info (12128): Elaborating entity "melodychime_seq" for hierarchy "melodychime_seq:U_SEQ"
-Info (12128): Elaborating entity "melodychime_sg" for hierarchy "melodychime_sg:U_SG0"
+Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file d:/altera/16.1/quartus/bin64/assignment_defaults.qdf
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/top.v
+    Info (12023): Found entity 1: TOP File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file rtl/melodychime_top.vhd
+    Info (12022): Found design unit 1: melodychime_top-RTL File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd Line: 47
+    Info (12023): Found entity 1: melodychime_top File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file rtl/melodychime_sg.vhd
+    Info (12022): Found design unit 1: melodychime_sg-RTL File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_sg.vhd Line: 48
+    Info (12023): Found entity 1: melodychime_sg File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_sg.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file rtl/melodychime_seq.vhd
+    Info (12022): Found design unit 1: melodychime_seq-RTL File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_seq.vhd Line: 51
+    Info (12023): Found entity 1: melodychime_seq File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_seq.vhd Line: 27
+Info (12127): Elaborating entity "TOP" for the top level hierarchy
+Info (10662): Verilog HDL Assignment information at TOP.v(141): truncated unsized constant literal with size 32 to size 1 with no loss of information File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 141
+Warning (10034): Output port "SDRAM_A" at TOP.v(115) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+Warning (10034): Output port "SDRAM_BA" at TOP.v(116) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 116
+Warning (10034): Output port "SDRAM_DQM" at TOP.v(124) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 124
+Warning (10034): Output port "SFLASH_DCLK" at TOP.v(87) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 87
+Warning (10034): Output port "SFLASH_ASDI" at TOP.v(88) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 88
+Warning (10034): Output port "SFLASH_CSn" at TOP.v(89) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 89
+Warning (10034): Output port "AD5681R_LDACn" at TOP.v(93) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 93
+Warning (10034): Output port "AD5681R_RSTn" at TOP.v(94) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 94
+Warning (10034): Output port "AD5681R_SCL" at TOP.v(95) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 95
+Warning (10034): Output port "AD5681R_SDA" at TOP.v(96) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 96
+Warning (10034): Output port "AD5681R_SYNCn" at TOP.v(97) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 97
+Warning (10034): Output port "ADXL362_CSn" at TOP.v(100) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 100
+Warning (10034): Output port "ADXL362_MOSI" at TOP.v(102) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 102
+Warning (10034): Output port "ADXL362_SCLK" at TOP.v(103) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 103
+Warning (10034): Output port "SDRAM_CASn" at TOP.v(117) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 117
+Warning (10034): Output port "SDRAM_CKE" at TOP.v(118) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 118
+Warning (10034): Output port "SDRAM_CLK" at TOP.v(119) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 119
+Warning (10034): Output port "SDRAM_CSn" at TOP.v(120) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 120
+Warning (10034): Output port "SDRAM_RASn" at TOP.v(122) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 122
+Warning (10034): Output port "SDRAM_WEn" at TOP.v(123) has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 123
+Warning (10863): bidir port "SDRAM_DQ" at TOP.v(121) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+Warning (10862): bidir port "SDRAM_DQ" at TOP.v(121) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+Warning (10863): bidir port "PMOD_A_io[3..2]" at TOP.v(128) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 128
+Warning (10862): bidir port "PMOD_A_io[3..2]" at TOP.v(128) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 128
+Warning (10862): bidir port "PMOD_A_io[1..0]" at TOP.v(128) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 128
+Warning (10863): bidir port "PMOD_B_io[3..1]" at TOP.v(129) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 129
+Warning (10862): bidir port "PMOD_B_io[3..1]" at TOP.v(129) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 129
+Warning (10862): bidir port "PMOD_B_io[0]" at TOP.v(129) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 129
+Warning (10863): bidir port "PMOD_C_io" at TOP.v(130) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 130
+Warning (10862): bidir port "PMOD_C_io" at TOP.v(130) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 130
+Warning (10863): bidir port "PMOD_D_io" at TOP.v(131) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 131
+Warning (10862): bidir port "PMOD_D_io" at TOP.v(131) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 131
+Warning (10863): bidir port "GPIO_0_io" at TOP.v(134) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+Warning (10862): bidir port "GPIO_0_io" at TOP.v(134) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+Warning (10863): bidir port "GPIO_1_io" at TOP.v(135) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+Warning (10862): bidir port "GPIO_1_io" at TOP.v(135) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+Warning (10863): bidir port "GPIO_2_io" at TOP.v(137) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+Warning (10862): bidir port "GPIO_2_io" at TOP.v(137) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+Warning (10862): input port "CLK_USR_i" at TOP.v(78) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 78
+Warning (10862): input port "SFLASH_DATA" at TOP.v(90) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 90
+Warning (10862): input port "ADXL362_MISO" at TOP.v(101) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 101
+Warning (10862): input port "ADXL362_INT1" at TOP.v(104) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 104
+Warning (10862): input port "ADXL362_INT2" at TOP.v(105) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 105
+Warning (10863): bidir port "ADT7420_CT" at TOP.v(110) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 110
+Warning (10862): bidir port "ADT7420_CT" at TOP.v(110) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 110
+Warning (10862): input port "ADT7420_INT" at TOP.v(111) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 111
+Warning (10863): bidir port "ADT7420_SCL" at TOP.v(108) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 108
+Warning (10862): bidir port "ADT7420_SCL" at TOP.v(108) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 108
+Warning (10863): bidir port "ADT7420_SDA" at TOP.v(109) has no fan-in File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 109
+Warning (10862): bidir port "ADT7420_SDA" at TOP.v(109) has no fan-out File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 109
+Info (12128): Elaborating entity "melodychime_top" for hierarchy "melodychime_top:u_melodychime_top" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 161
+Info (12128): Elaborating entity "melodychime_seq" for hierarchy "melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd Line: 183
+Info (12128): Elaborating entity "melodychime_sg" for hierarchy "melodychime_top:u_melodychime_top|melodychime_sg:U_SG0" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd Line: 207
+Info (10035): Verilog HDL or VHDL information at melodychime_sg.vhd(57): object "env_cnext_sig" declared but not used File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/melodychime_sg.vhd Line: 57
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "PMOD_A_io[0]" and its non-tri-state driver. File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 128
+    Warning (13035): Inserted always-enabled tri-state buffer between "PMOD_A_io[1]" and its non-tri-state driver. File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 128
+    Warning (13035): Inserted always-enabled tri-state buffer between "PMOD_B_io[0]" and its non-tri-state driver. File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 129
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "ADT7420_CT" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 110
+    Warning (13040): bidirectional pin "ADT7420_SCL" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 108
+    Warning (13040): bidirectional pin "ADT7420_SDA" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 109
+    Warning (13040): bidirectional pin "SDRAM_DQ[0]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[1]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[2]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[3]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[4]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[5]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[6]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[7]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[8]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[9]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[10]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[11]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[12]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[13]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[14]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "SDRAM_DQ[15]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 121
+    Warning (13040): bidirectional pin "PMOD_A_io[2]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 128
+    Warning (13040): bidirectional pin "PMOD_A_io[3]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 128
+    Warning (13040): bidirectional pin "PMOD_B_io[1]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 129
+    Warning (13040): bidirectional pin "PMOD_B_io[2]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 129
+    Warning (13040): bidirectional pin "PMOD_B_io[3]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 129
+    Warning (13040): bidirectional pin "PMOD_C_io[0]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 130
+    Warning (13040): bidirectional pin "PMOD_C_io[1]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 130
+    Warning (13040): bidirectional pin "PMOD_C_io[2]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 130
+    Warning (13040): bidirectional pin "PMOD_C_io[3]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 130
+    Warning (13040): bidirectional pin "PMOD_D_io[0]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 131
+    Warning (13040): bidirectional pin "PMOD_D_io[1]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 131
+    Warning (13040): bidirectional pin "PMOD_D_io[2]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 131
+    Warning (13040): bidirectional pin "PMOD_D_io[3]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 131
+    Warning (13040): bidirectional pin "GPIO_0_io[0]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[1]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[2]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[3]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[4]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[5]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[6]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[7]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[8]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[9]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[10]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[11]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[12]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[13]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[14]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[15]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[16]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[17]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[18]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[19]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[20]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[21]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[22]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[23]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[24]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[25]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[26]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[27]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[28]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[29]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[30]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[31]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[32]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[33]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[34]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_0_io[35]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 134
+    Warning (13040): bidirectional pin "GPIO_1_io[0]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[1]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[2]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[3]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[4]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[5]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[6]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[7]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[8]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[9]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[10]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[11]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[12]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[13]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[14]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[15]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[16]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[17]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[18]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[19]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[20]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[21]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[22]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[23]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[24]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_1_io[25]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 135
+    Warning (13040): bidirectional pin "GPIO_2_io[0]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[1]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[2]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[3]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[4]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[5]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[6]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[7]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[8]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[9]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[10]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[11]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[12]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[13]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[14]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[15]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[16]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[17]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[18]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[19]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[20]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[21]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[22]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[23]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[24]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[25]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[26]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[27]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[28]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[29]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[30]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[31]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[32]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[33]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[34]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[35]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[36]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[37]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[38]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[39]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[40]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[41]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[42]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[43]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[44]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[45]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[46]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[47]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[48]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[49]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[50]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[51]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[52]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[53]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[54]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+    Warning (13040): bidirectional pin "GPIO_2_io[55]" has no driver File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 137
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "PMOD_A_io[0]~synth" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 128
+    Warning (13010): Node "PMOD_A_io[1]~synth" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 128
+    Warning (13010): Node "PMOD_B_io[0]~synth" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 129
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED_o[0]" is stuck at VCC File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 81
+    Warning (13410): Pin "LED_o[1]" is stuck at VCC File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 81
+    Warning (13410): Pin "LED_o[2]" is stuck at VCC File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 81
+    Warning (13410): Pin "SFLASH_DCLK" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 87
+    Warning (13410): Pin "SFLASH_ASDI" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 88
+    Warning (13410): Pin "SFLASH_CSn" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 89
+    Warning (13410): Pin "AD5681R_LDACn" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 93
+    Warning (13410): Pin "AD5681R_RSTn" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 94
+    Warning (13410): Pin "AD5681R_SCL" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 95
+    Warning (13410): Pin "AD5681R_SDA" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 96
+    Warning (13410): Pin "AD5681R_SYNCn" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 97
+    Warning (13410): Pin "ADXL362_CSn" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 100
+    Warning (13410): Pin "ADXL362_MOSI" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 102
+    Warning (13410): Pin "ADXL362_SCLK" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 103
+    Warning (13410): Pin "SDRAM_A[0]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[1]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[2]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[3]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[4]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[5]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[6]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[7]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[8]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[9]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[10]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[11]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_A[12]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 115
+    Warning (13410): Pin "SDRAM_BA[0]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 116
+    Warning (13410): Pin "SDRAM_BA[1]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 116
+    Warning (13410): Pin "SDRAM_CASn" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 117
+    Warning (13410): Pin "SDRAM_CKE" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 118
+    Warning (13410): Pin "SDRAM_CLK" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 119
+    Warning (13410): Pin "SDRAM_CSn" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 120
+    Warning (13410): Pin "SDRAM_RASn" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 122
+    Warning (13410): Pin "SDRAM_WEn" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 123
+    Warning (13410): Pin "SDRAM_DQM[0]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 124
+    Warning (13410): Pin "SDRAM_DQM[1]" is stuck at GND File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 124
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 276 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 8 output pins
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK_USR_i" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 78
+    Warning (15610): No output dependent on input pin "SFLASH_DATA" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 90
+    Warning (15610): No output dependent on input pin "ADXL362_MISO" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 101
+    Warning (15610): No output dependent on input pin "ADXL362_INT1" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 104
+    Warning (15610): No output dependent on input pin "ADXL362_INT2" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 105
+    Warning (15610): No output dependent on input pin "ADT7420_INT" File: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 111
+Info (21057): Implemented 471 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21060): Implemented 153 bidirectional pins
     Info (21061): Implemented 265 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 552 megabytes
-    Info: Processing ended: Sun Mar 15 02:28:33 2015
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 255 warnings
+    Info: Peak virtual memory: 675 megabytes
+    Info: Processing ended: Sun Mar 12 14:08:21 2017
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:49
 
 
