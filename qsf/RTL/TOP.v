@@ -1,7 +1,7 @@
 //TOP.v
-//       top
+//       TOP
 //      
-// 
+//170312u   :trans for CQ_MAX10
 //151230we      :trans for BeMicroMAX10
 // CQEXT_melodychime base by @s_osafune tw
 // base Copyright (c) 2015 by Semillero ADT. 
@@ -11,164 +11,89 @@
 //
 
 module TOP(
-        //CLOCKS
-          CLK_50M_i
-        , CLK_USR_i
+      input     CK48M_i     //27
+    , input     XPSW_i      //123
+    , output    XLED_R_o   //120
+    , output    XLED_G_o   //122
+    , output    XLED_B_o   //121
+    // CN1
+    , inout     P62
+    , inout     P61
+    , inout     P60
+    , inout     P59
+    , inout     P58
+    , inout     P57
+    , inout     P56
+    , inout     P55
+    , inout     P52
+    , inout     P50
+    , inout     P48
+    , inout     P47
+    , inout     P46
+    , inout     P45
+    , inout     P44
+    , inout     P43
+    , inout     P41
+    , inout     P39
+    , inout     P38
+    // CN2
+    , inout     P124
+    , inout     P127
+    , inout     P130
+    , inout     P131
+    , inout     P132
+    , inout     P134
+    , inout     P135
+    , inout     P140
+    , inout     P141
+//    , inout     P3 //analog AD pin
+    , inout     P6
+    , inout     P7
+    , inout     P8
+    , inout     P10
+    , inout     P11
+    , inout     P12
+    , inout     P13
+    , inout     P14
+    , inout     P17
 
-        //LED
-        , LED_o
-
-        //SW
-        , PSW_i
-
-        //FLASH
-        , SFLASH_DCLK
-        , SFLASH_ASDI
-        , SFLASH_CSn
-        , SFLASH_DATA
-
-        //AD5681R
-        , AD5681R_LDACn
-        , AD5681R_RSTn
-        , AD5681R_SCL
-        , AD5681R_SDA
-        , AD5681R_SYNCn
-
-        //ACCELEROMETER
-        , ADXL362_CSn
-        , ADXL362_MISO
-        , ADXL362_MOSI
-        , ADXL362_SCLK
-        , ADXL362_INT1
-        , ADXL362_INT2
-
-        //ADT7420 Temperature Sensor
-        , ADT7420_CT
-        , ADT7420_INT
-        , ADT7420_SCL
-        , ADT7420_SDA
-
-        //SDRAM
-        , SDRAM_A
-        , SDRAM_BA
-        , SDRAM_CASn
-        , SDRAM_CKE
-        , SDRAM_CLK
-        , SDRAM_CSn
-        , SDRAM_DQ
-        , SDRAM_RASn
-        , SDRAM_WEn
-        , SDRAM_DQM
-
-
-        //PMOD_[A:D]
-        , PMOD_A_io
-        , PMOD_B_io
-        , PMOD_C_io
-        , PMOD_D_io
-
-        //GPIO_[0:2]/DIFF
-        , GPIO_0_io
-        , GPIO_1_io
-        , GPIO_2_io
-        
 ) ;
-        //CLOCKS
-        input           CLK_50M_i          ;
-        input           CLK_USR_i        ;
 
-        //LED_o
-        output [ 7 :0]  LED_o             ; //light : L
+    // start
+    wire        CK50M   ;
+    PLL PLL (
+          .inclk0   ( CK48M_i   )
+        , .areset   ( 1'b0      )
+        , .c0       ( CK50M     )
+        , .locked   ()
+    ) ;
 
-        //PSW_i
-        input  [ 3 :0]  PSW_i              ;
-
-        //FLASH
-        output          SFLASH_DCLK     ;
-        output          SFLASH_ASDI     ;
-        output          SFLASH_CSn      ;
-        input           SFLASH_DATA     ;
-
-        //AD5681R
-        output          AD5681R_LDACn   ;
-        output          AD5681R_RSTn    ;
-        output          AD5681R_SCL     ;
-        output          AD5681R_SDA     ;
-        output          AD5681R_SYNCn   ;
-
-        //ACCELEROMETER
-        output          ADXL362_CSn     ;
-        input           ADXL362_MISO    ;
-        output          ADXL362_MOSI    ;
-        output          ADXL362_SCLK    ;
-        input           ADXL362_INT1    ;
-        input           ADXL362_INT2    ;
-
-        //ADT7420 Temperature Sensor
-        inout           ADT7420_SCL     ;
-        inout           ADT7420_SDA     ;
-        inout           ADT7420_CT      ;
-        input           ADT7420_INT     ;
+    wire            XAR             ;
+    assign XAR = 1'b1 ;
 
 
-        //SDRAM
-        output  [12 :0] SDRAM_A         ;
-        output  [ 1 :0] SDRAM_BA        ;
-        output          SDRAM_CASn      ;
-        output          SDRAM_CKE       ;
-        output          SDRAM_CLK       ;
-        output          SDRAM_CSn       ;
-        inout   [15 :0] SDRAM_DQ        ;
-        output          SDRAM_RASn      ;
-        output          SDRAM_WEn       ;
-        output  [ 1 :0] SDRAM_DQM       ;
-
-
-        //PMOD_[ A :D]
-        inout   [ 3 :0] PMOD_A_io          ;
-        inout   [ 3 :0] PMOD_B_io          ;
-        inout   [ 3 :0] PMOD_C_io          ;
-        inout   [ 3 :0] PMOD_D_io          ;
-
-        //GPIO_[0:3]/DIFF
-        inout   [35 :0] GPIO_0_io          ;
-        inout   [25 :0] GPIO_1_io          ;
-        //GPIO_2_io/EG
-        inout   [55 :0] GPIO_2_io          ;
-
-        // start
-        wire            XAR             ;
-        assign XAR = 1 ;
-        wire    [ 3 :0] test_score_led  ;
-
-        wire            start         ; //play start('1':start)
-        wire            timing_1ms      ; //1ms timig pulse out
-        wire            tempo_led       ;
-        wire            aud_l           ; //1bitDSM-DAC
-        assign start = ~ (& PSW_i) ;
-        melodychime_top # (
-                  .CLOCK_EDGE   ( 1'b1          ) //Rise edge drive clock
-                , .RESET_LEVEL  ( 1'b0          ) //Positive logic reset
-        ) u_melodychime_top(
-                  .reset                ( XAR                   )
-                , .clk                  ( CLK_50M_i             ) //system clock
-                , .test_score_led       ( test_score_led        )
-                , .start                ( start                 ) //play start('1':start)
-                , .timing_1ms_out       ( timing_1ms            ) //1ms timig pulse out
-                , .tempo_led            ( tempo_led             )
-                , .aud_l_out            ( aud_l                 ) //1bitDSM-DAC
-                , .aud_r_out            ()                        //same aud_l_out
-        ) ; //melodychime_top
-        assign LED_o = 
-                { 
-                  tempo_led 
-                , test_score_led[0]
-                , test_score_led[1]
-                , test_score_led[2]
-                , test_score_led[3]
-                , 3'b111
-                } ;
-        assign PMOD_A_io[0] = aud_l ;
-        assign PMOD_A_io[1] = ~ aud_l ;
-        assign PMOD_B_io[0] = timing_1ms ;
+    wire    [ 3 :0] test_score_led  ;
+    wire            start           ; //play start('1':start)
+    wire            timing_1ms      ; //1ms timig pulse out
+    wire            tempo_led       ;
+    wire            aud_l           ; //1bitDSM-DAC
+    assign start = ~ XPSW_i ;
+    melodychime_top # (
+          .CLOCK_EDGE   ( 1'b1          ) //Rise edge drive clock
+        , .RESET_LEVEL  ( 1'b0          ) //Positive logic reset
+    ) u_melodychime_top(
+          .reset            ( XAR               )
+        , .clk              ( CK50M             ) //system clock
+        , .test_score_led   ( test_score_led    )
+        , .start            ( start             ) //play start('1':start)
+        , .timing_1ms_out   ( timing_1ms        ) //1ms timig pulse out
+        , .tempo_led        ( tempo_led         )
+        , .aud_l_out        ( aud_l             ) //1bitDSM-DAC
+        , .aud_r_out        ()                    //same aud_l_out
+    ) ; //melodychime_top
+    assign XLED_R_o = ~ tempo_led ;
+    assign XLED_G_o = ~ test_score_led[0]   ;
+    assign XLED_B_o = ~ timing_1ms ;
+    assign P17 = aud_l ;
+    assign P14 = ~ aud_l ;
 endmodule //TOP

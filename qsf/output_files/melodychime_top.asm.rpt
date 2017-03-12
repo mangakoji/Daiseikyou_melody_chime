@@ -1,5 +1,5 @@
 Assembler report for melodychime_top
-Sun Mar 12 14:08:50 2017
+Sun Mar 12 23:50:36 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/output_files/melodychime_top.sof
+  5. Assembler Device Options: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/output_files/melodychime_top.sof
   6. Assembler Messages
 
 
@@ -38,11 +38,11 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Mar 12 14:08:50 2017 ;
+; Assembler Status      ; Successful - Sun Mar 12 23:50:36 2017 ;
 ; Revision Name         ; melodychime_top                       ;
 ; Top-level Entity Name ; TOP                                   ;
 ; Family                ; MAX 10                                ;
-; Device                ; 10M08DAF484C8GES                      ;
+; Device                ; 10M08SAE144C8G                        ;
 +-----------------------+---------------------------------------+
 
 
@@ -58,18 +58,18 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; File Name                                                                         ;
 +-----------------------------------------------------------------------------------+
-; D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/output_files/melodychime_top.sof ;
+; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/output_files/melodychime_top.sof ;
 +-----------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: D:/work/Verilog/Daihannjou/CQEXT_melodychime/qsf/output_files/melodychime_top.sof ;
+; Assembler Device Options: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/output_files/melodychime_top.sof ;
 +----------------+--------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                    ;
 +----------------+--------------------------------------------------------------------------------------------+
-; Device         ; 10M08DAF484C8GES                                                                           ;
-; JTAG usercode  ; 0x0009C24F                                                                                 ;
-; Checksum       ; 0x0009C24F                                                                                 ;
+; Device         ; 10M08SAE144C8G                                                                             ;
+; JTAG usercode  ; 0x000A592D                                                                                 ;
+; Checksum       ; 0x000A592D                                                                                 ;
 +----------------+--------------------------------------------------------------------------------------------+
 
 
@@ -79,15 +79,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun Mar 12 14:08:46 2017
+    Info: Processing started: Sun Mar 12 23:50:32 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off melodychime_top -c melodychime_top
-Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file d:/altera/16.1/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 565 megabytes
-    Info: Processing ended: Sun Mar 12 14:08:50 2017
+    Info: Peak virtual memory: 559 megabytes
+    Info: Processing ended: Sun Mar 12 23:50:36 2017
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 

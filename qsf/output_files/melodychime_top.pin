@@ -28,14 +28,14 @@
  -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
  --                 of its bank.
  --                  Bank 1A:       2.5V
- --                  Bank 1B:       3.3V
- --                  Bank 2:       3.3V
- --                  Bank 3:       3.3V
- --                  Bank 4:       3.3V
- --                  Bank 5:       3.3V
- --                  Bank 6:       3.3V
- --                  Bank 7:       3.3V
- --                  Bank 8:       3.3V
+ --                  Bank 1B:       2.5V
+ --                  Bank 2:       2.5V
+ --                  Bank 3:       2.5V
+ --                  Bank 4:       2.5V
+ --                  Bank 5:       2.5V
+ --                  Bank 6:       2.5V
+ --                  Bank 7:       2.5V
+ --                  Bank 8:       2.5V
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
  --                  It can also be used to report unused dedicated pins. The connection
  --                  on the board for unused dedicated pins depends on whether this will
@@ -66,491 +66,151 @@
  ---------------------------------------------------------------------------------
 
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-CHIP  "melodychime_top"  ASSIGNED TO AN: 10M08DAF484C8GES
+CHIP  "melodychime_top"  ASSIGNED TO AN: 10M08SAE144C8G
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-GND                          : A1        : gnd    :                   :         :           :                
-GPIO_0_io[3]                 : A2        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[5]                 : A3        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[7]                 : A4        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[9]                 : A5        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[11]                : A6        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[12]                : A7        : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-GPIO_0_io[13]                : A8        : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-GPIO_0_io[14]                : A9        : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : A10       :        :                   :         :           :                
-NC                           : A11       :        :                   :         :           :                
-NC                           : A12       :        :                   :         :           :                
-NC                           : A13       :        :                   :         :           :                
-GPIO_0_io[24]                : A14       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7         :                
-NC                           : A16       :        :                   :         :           :                
-NC                           : A17       :        :                   :         :           :                
-NC                           : A18       :        :                   :         :           :                
-NC                           : A19       :        :                   :         :           :                
-NC                           : A20       :        :                   :         :           :                
-NC                           : A21       :        :                   :         :           :                
-GND                          : A22       : gnd    :                   :         :           :                
-GPIO_2_io[21]                : AA1       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_2_io[22]                : AA2       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA3       :        :                   :         : 3         :                
-GND                          : AA4       : gnd    :                   :         :           :                
-LED_o[7]                     : AA5       : output : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_1_io[13]                : AA6       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_1_io[12]                : AA7       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_2_io[27]                : AA8       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA9       :        :                   :         : 3         :                
-GPIO_1_io[16]                : AA10      : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-NC                           : AA11      :        :                   :         :           :                
-NC                           : AA12      :        :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 4         :                
-GPIO_1_io[0]                 : AA14      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-GPIO_1_io[2]                 : AA15      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA16      :        :                   :         : 4         :                
-NC                           : AA17      :        :                   :         :           :                
-GND                          : AA18      : gnd    :                   :         :           :                
-NC                           : AA19      :        :                   :         :           :                
-NC                           : AA20      :        :                   :         :           :                
-SDRAM_A[3]                   : AA21      : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_A[4]                   : AA22      : output : 3.3-V LVTTL       :         : 5         : Y              
-GND                          : AB1       : gnd    :                   :         :           :                
-NC                           : AB2       :        :                   :         :           :                
-NC                           : AB3       :        :                   :         :           :                
-LED_o[6]                     : AB4       : output : 3.3-V LVTTL       :         : 3         : Y              
-PSW_i[3]                     : AB5       : input  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_2_io[25]                : AB6       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_2_io[26]                : AB7       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_2_io[28]                : AB8       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB9       :        :                   :         : 3         :                
-NC                           : AB10      :        :                   :         :           :                
-NC                           : AB11      :        :                   :         :           :                
-NC                           : AB12      :        :                   :         :           :                
-NC                           : AB13      :        :                   :         :           :                
-ADT7420_INT                  : AB14      : input  : 3.3-V LVTTL       :         : 4         : Y              
-GPIO_1_io[1]                 : AB15      : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB16      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 4         :                
-NC                           : AB19      :        :                   :         :           :                
-NC                           : AB20      :        :                   :         :           :                
-NC                           : AB21      :        :                   :         :           :                
-GND                          : AB22      : gnd    :                   :         :           :                
-GPIO_0_io[1]                 : B1        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[0]                 : B2        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[4]                 : B3        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[6]                 : B4        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[8]                 : B5        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GND                          : B6        : gnd    :                   :         :           :                
-GPIO_0_io[10]                : B7        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[15]                : B8        : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-GND                          : B9        : gnd    :                   :         :           :                
-GPIO_0_io[16]                : B10       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : B11       :        :                   :         :           :                
-NC                           : B12       :        :                   :         :           :                
-GND                          : B13       : gnd    :                   :         :           :                
-GPIO_0_io[25]                : B14       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B15       :        :                   :         : 7         :                
-NC                           : B16       :        :                   :         :           :                
-NC                           : B17       :        :                   :         :           :                
-GND                          : B18       : gnd    :                   :         :           :                
-NC                           : B19       :        :                   :         :           :                
-NC                           : B20       :        :                   :         :           :                
-NC                           : B21       :        :                   :         :           :                
-NC                           : B22       :        :                   :         :           :                
-GPIO_2_io[0]                 : C1        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 8         :                
-GPIO_0_io[2]                 : C3        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[43]                : C4        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[42]                : C5        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[40]                : C6        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[38]                : C7        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[37]                : C8        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[17]                : C9        : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : C10       :        :                   :         :           :                
-NC                           : C11       :        :                   :         :           :                
-NC                           : C12       :        :                   :         :           :                
-GPIO_0_io[27]                : C13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-GPIO_0_io[26]                : C14       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : C15       :        :                   :         :           :                
-NC                           : C16       :        :                   :         :           :                
-GPIO_0_io[31]                : C17       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : C18       :        :                   :         :           :                
-NC                           : C19       :        :                   :         :           :                
-PMOD_A_io[0]                 : C20       : bidir  : 3.3 V Schmitt Trigger :         : 6         : Y              
-SDRAM_DQ[15]                 : C21       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_DQ[0]                  : C22       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-GPIO_2_io[2]                 : D1        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-GPIO_2_io[1]                 : D2        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-GPIO_2_io[3]                 : D3        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-GND                          : D4        : gnd    :                   :         :           :                
-GPIO_2_io[41]                : D5        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[39]                : D6        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[36]                : D7        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[34]                : D8        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[31]                : D9        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :         : 8         :                
-GND                          : D11       : gnd    :                   :         :           :                
-NC                           : D12       :        :                   :         :           :                
-GPIO_0_io[21]                : D13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-GPIO_0_io[22]                : D14       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : D15       :        :                   :         :           :                
-GND                          : D16       : gnd    :                   :         :           :                
-GPIO_0_io[30]                : D17       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-PMOD_A_io[2]                 : D18       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-PMOD_A_io[1]                 : D19       : bidir  : 3.3 V Schmitt Trigger :         : 6         : Y              
-GND                          : D20       : gnd    :                   :         :           :                
-SDRAM_DQ[14]                 : D21       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_DQ[1]                  : D22       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-GPIO_2_io[4]                 : E1        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-GND                          : E2        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 1A        :                
-GND                          : E5        : gnd    :                   :         :           :                
-GPIO_2_io[35]                : E6        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GND                          : E7        : gnd    :                   :         :           :                
-GPIO_2_io[33]                : E8        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[32]                : E9        : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[30]                : E10       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_2_io[29]                : E11       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[20]                : E12       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-GPIO_0_io[23]                : E13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : E14       :        :                   :         :           :                
-GPIO_0_io[33]                : E15       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-GPIO_0_io[32]                : E16       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : E17       :        :                   :         :           :                
-PMOD_A_io[3]                 : E18       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-PMOD_B_io[0]                 : E19       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-NC                           : E20       :        :                   :         :           :                
-SDRAM_DQ[13]                 : E21       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_DQ[2]                  : E22       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-GPIO_2_io[6]                 : F1        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-GPIO_2_io[5]                 : F2        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F4        :        :                   :         : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1A        :                
-GND                          : F6        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 8         :                
-~ALTERA_CONF_DONE~ / RESERVED_INPUT : F8        : input  : 3.3 V Schmitt Trigger :         : 8         : N              
-VCCIO8                       : F9        : power  :                   : 3.3V    : 8         :                
-GND                          : F10       : gnd    :                   :         :           :                
-VCCIO8                       : F11       : power  :                   : 3.3V    : 8         :                
-VCCIO7                       : F12       : power  :                   : 3.3V    : 7         :                
-GND                          : F13       : gnd    :                   :         :           :                
-VCCIO7                       : F14       : power  :                   : 3.3V    : 7         :                
-NC                           : F15       :        :                   :         :           :                
-NC                           : F16       :        :                   :         :           :                
-NC                           : F17       :        :                   :         :           :                
-PMOD_B_io[1]                 : F18       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-NC                           : F19       :        :                   :         :           :                
-PMOD_B_io[2]                 : F20       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_DQ[12]                 : F21       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_DQ[3]                  : F22       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-GPIO_2_io[7]                 : G1        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-~ALTERA_TCK~ / RESERVED_INPUT : G2        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1A        :                
-ANAIN1                       : G5        :        :                   :         :           :                
-GND                          : G6        : gnd    :                   :         :           :                
-NC                           : G7        :        :                   :         :           :                
-GND                          : G8        : gnd    :                   :         :           :                
-~ALTERA_nSTATUS~ / RESERVED_INPUT : G9        : input  : 3.3 V Schmitt Trigger :         : 8         : N              
-VCCIO8                       : G10       : power  :                   : 3.3V    : 8         :                
-VCCIO8                       : G11       : power  :                   : 3.3V    : 8         :                
-VCCIO7                       : G12       : power  :                   : 3.3V    : 7         :                
-VCCIO7                       : G13       : power  :                   : 3.3V    : 7         :                
-VCCIO7                       : G14       : power  :                   : 3.3V    : 7         :                
-GND                          : G15       : gnd    :                   :         :           :                
-VCCD_PLL2                    : G16       : power  :                   : 1.2V    :           :                
-AD5681R_SCL                  : G17       : output : 3.3-V LVTTL       :         : 6         : Y              
-GND                          : G18       : gnd    :                   :         :           :                
-PMOD_B_io[3]                 : G19       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_DQ[11]                 : G20       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-GND                          : G21       : gnd    :                   :         :           :                
-SDRAM_DQ[4]                  : G22       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-GPIO_2_io[8]                 : H1        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H4        :        :                   :         : 1A        :                
-REFGND                       : H5        :        :                   :         :           :                
-ADC_VREF                     : H6        :        :                   :         :           :                
-VCCA_ADC                     : H7        : power  :                   : 2.5V    :           :                
-VCCA3                        : H8        : power  :                   : 2.5V    :           :                
-~ALTERA_nCONFIG~ / RESERVED_INPUT : H9        : input  : 3.3 V Schmitt Trigger :         : 8         : N              
-~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : H10       : input  : 3.3-V LVTTL       :         : 8         : N              
-GPIO_2_io[44]                : H11       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[18]                : H12       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : H13       :        :                   :         :           :                
-GPIO_0_io[28]                : H14       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-VCCA2                        : H15       : power  :                   : 2.5V    :           :                
-VCCIO6                       : H16       : power  :                   : 3.3V    : 6         :                
-AD5681R_SDA                  : H17       : output : 3.3-V LVTTL       :         : 6         : Y              
-NC                           : H18       :        :                   :         :           :                
-NC                           : H19       :        :                   :         :           :                
-NC                           : H20       :        :                   :         :           :                
-SDRAM_DQ[10]                 : H21       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_DQ[5]                  : H22       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-GPIO_2_io[9]                 : J1        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-GND                          : J2        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 1A        :                
-NC                           : J5        :        :                   :         :           :                
-GND                          : J6        : gnd    :                   :         :           :                
-VCCINT                       : J7        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J8        :        :                   :         : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J9        :        :                   :         : 1A        :                
-GPIO_2_io[46]                : J10       : bidir  : 3.3-V LVTTL       :         : 8         : Y              
-GPIO_0_io[19]                : J11       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : J12       :        :                   :         :           :                
-GPIO_0_io[29]                : J13       : bidir  : 3.3-V LVTTL       :         : 7         : Y              
-NC                           : J14       :        :                   :         :           :                
-NC                           : J15       :        :                   :         :           :                
-GND                          : J16       : gnd    :                   :         :           :                
-VCCIO6                       : J17       : power  :                   : 3.3V    : 6         :                
-NC                           : J18       :        :                   :         :           :                
-GND                          : J19       : gnd    :                   :         :           :                
-NC                           : J20       :        :                   :         :           :                
-SDRAM_DQ[9]                  : J21       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_DQ[6]                  : J22       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-NC                           : K1        :        :                   :         :           :                
-GPIO_2_io[10]                : K2        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-GND                          : K3        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K4        :        :                   :         : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K6        :        :                   :         : 1A        :                
-VCCIO1A                      : K7        : power  :                   : 2.5V    : 1A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K8        :        :                   :         : 1B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K9        :        :                   :         : 1B        :                
-GND                          : K10       : gnd    :                   :         :           :                
-VCC                          : K11       : power  :                   : 1.2V    :           :                
-GND                          : K12       : gnd    :                   :         :           :                
-VCC                          : K13       : power  :                   : 1.2V    :           :                
-GPIO_0_io[34]                : K14       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-GPIO_0_io[35]                : K15       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-VCCIO6                       : K16       : power  :                   : 3.3V    : 6         :                
-VCCIO6                       : K17       : power  :                   : 3.3V    : 6         :                
-NC                           : K18       :        :                   :         :           :                
-NC                           : K19       :        :                   :         :           :                
-NC                           : K20       :        :                   :         :           :                
-SDRAM_DQ[8]                  : K21       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_DQ[7]                  : K22       : bidir  : 3.3-V LVTTL       :         : 6         : Y              
-NC                           : L1        :        :                   :         :           :                
-GPIO_2_io[11]                : L2        : bidir  : 3.3-V LVTTL       :         : 1B        : Y              
-DNU                          : L3        :        :                   :         :           :                
-~ALTERA_TDI~ / RESERVED_INPUT_WITH_WEAK_PULLUP : L4        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
-GND                          : L5        : gnd    :                   :         :           :                
-VCCIO1A                      : L6        : power  :                   : 2.5V    : 1A        :                
-VCCIO1B                      : L7        : power  :                   : 3.3V    : 1B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L8        :        :                   :         : 1B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L9        :        :                   :         : 1B        :                
-VCC                          : L10       : power  :                   : 1.2V    :           :                
-VCC                          : L11       : power  :                   : 1.2V    :           :                
-VCC                          : L12       : power  :                   : 1.2V    :           :                
-GND                          : L13       : gnd    :                   :         :           :                
-ADXL362_CSn                  : L14       : output : 3.3-V LVTTL       :         : 6         : Y              
-AD5681R_RSTn                 : L15       : output : 3.3-V LVTTL       :         : 6         : Y              
-VCCIO6                       : L16       : power  :                   : 3.3V    : 6         :                
-GND                          : L17       : gnd    :                   :         :           :                
-ADXL362_MISO                 : L18       : input  : 3.3-V LVTTL       :         : 6         : Y              
-ADXL362_MOSI                 : L19       : output : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_DQM[0]                 : L20       : output : 3.3-V LVTTL       :         : 6         : Y              
-GND                          : L21       : gnd    :                   :         :           :                
-SDRAM_DQM[1]                 : L22       : output : 3.3-V LVTTL       :         : 5         : Y              
-PSW_i[0]                     : M1        : input  : 3.3-V LVTTL       :         : 2         : Y              
-LED_o[0]                     : M2        : output : 3.3-V LVTTL       :         : 2         : Y              
-NC                           : M3        :        :                   :         :           :                
-NC                           : M4        :        :                   :         :           :                
-~ALTERA_TDO~                 : M5        : output : 3.3-V LVTTL       :         : 1B        : N              
-VCCIO1B                      : M6        : power  :                   : 3.3V    : 1B        :                
-GND                          : M7        : gnd    :                   :         :           :                
-GPIO_2_io[48]                : M8        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[47]                : M9        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GND                          : M10       : gnd    :                   :         :           :                
-VCC                          : M11       : power  :                   : 1.2V    :           :                
-VCC                          : M12       : power  :                   : 1.2V    :           :                
-VCC                          : M13       : power  :                   : 1.2V    :           :                
-ADXL362_INT2                 : M14       : input  : 3.3-V LVTTL       :         : 6         : Y              
-ADXL362_INT1                 : M15       : input  : 3.3-V LVTTL       :         : 6         : Y              
-GND                          : M16       : gnd    :                   :         :           :                
-VCCIO6                       : M17       : power  :                   : 3.3V    : 6         :                
-ADXL362_SCLK                 : M18       : output : 3.3-V LVTTL       :         : 6         : Y              
-GND                          : M19       : gnd    :                   :         :           :                
-SDRAM_RASn                   : M20       : output : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_WEn                    : M21       : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_CLK                    : M22       : output : 3.3-V LVTTL       :         : 5         : Y              
-LED_o[1]                     : N1        : output : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[12]                : N2        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[53]                : N3        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[52]                : N4        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[51]                : N5        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-VCCIO2                       : N6        : power  :                   : 3.3V    : 2         :                
-VCCIO2                       : N7        : power  :                   : 3.3V    : 2         :                
-GPIO_2_io[50]                : N8        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[49]                : N9        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-VCC                          : N10       : power  :                   : 1.2V    :           :                
-GND                          : N11       : gnd    :                   :         :           :                
-VCC                          : N12       : power  :                   : 1.2V    :           :                
-GND                          : N13       : gnd    :                   :         :           :                
-CLK_50M_i                    : N14       : input  : 3.3-V LVTTL       :         : 6         : Y              
-CLK_USR_i                    : N15       : input  : 3.3-V LVTTL       :         : 6         : Y              
-VCCIO5                       : N16       : power  :                   : 3.3V    : 5         :                
-VCCIO6                       : N17       : power  :                   : 3.3V    : 6         :                
-AD5681R_LDACn                : N18       : output : 3.3-V LVTTL       :         : 6         : Y              
-AD5681R_SYNCn                : N19       : output : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_A[12]                  : N20       : output : 3.3-V LVTTL       :         : 6         : Y              
-SDRAM_CASn                   : N21       : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_CKE                    : N22       : output : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_2_io[14]                : P1        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GND                          : P2        : gnd    :                   :         :           :                
-GPIO_2_io[13]                : P3        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[55]                : P4        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[54]                : P5        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GND                          : P6        : gnd    :                   :         :           :                
-VCCIO2                       : P7        : power  :                   : 3.3V    : 2         :                
-NC                           : P8        :        :                   :         :           :                
-NC                           : P9        :        :                   :         :           :                
-SFLASH_DATA                  : P10       : input  : 3.3-V LVTTL       :         : 3         : Y              
-SFLASH_DCLK                  : P11       : output : 3.3-V LVTTL       :         : 3         : Y              
-NC                           : P12       :        :                   :         :           :                
-ADT7420_CT                   : P13       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-PMOD_D_io[3]                 : P14       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
-PMOD_D_io[2]                 : P15       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
-VCCIO5                       : P16       : power  :                   : 3.3V    : 5         :                
-GND                          : P17       : gnd    :                   :         :           :                
-PMOD_C_io[3]                 : P18       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_A[11]                  : P19       : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_A[8]                   : P20       : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_CSn                    : P21       : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_A[9]                   : P22       : output : 3.3-V LVTTL       :         : 5         : Y              
-PSW_i[1]                     : R1        : input  : 3.3-V LVTTL       :         : 2         : Y              
-LED_o[2]                     : R2        : output : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[15]                : R3        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[17]                : R4        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
-VCCIO2                       : R6        : power  :                   : 3.3V    : 2         :                
-NC                           : R7        :        :                   :         :           :                
-VCCA1                        : R8        : power  :                   : 2.5V    :           :                
-NC                           : R9        :        :                   :         :           :                
-SFLASH_CSn                   : R10       : output : 3.3-V LVTTL       :         : 3         : Y              
-SFLASH_ASDI                  : R11       : output : 3.3-V LVTTL       :         : 3         : Y              
-NC                           : R12       :        :                   :         :           :                
-ADT7420_SDA                  : R13       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-PMOD_D_io[0]                 : R14       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
-PMOD_D_io[1]                 : R15       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
-VCCIO5                       : R16       : power  :                   : 3.3V    : 5         :                
-VCCIO5                       : R17       : power  :                   : 3.3V    : 5         :                
-PMOD_C_io[2]                 : R18       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
-GND                          : R19       : gnd    :                   :         :           :                
-SDRAM_BA[0]                  : R20       : output : 3.3-V LVTTL       :         : 5         : Y              
-GND                          : R21       : gnd    :                   :         :           :                
-SDRAM_A[7]                   : R22       : output : 3.3-V LVTTL       :         : 5         : Y              
-LED_o[3]                     : T1        : output : 3.3-V LVTTL       :         : 2         : Y              
-GPIO_2_io[16]                : T2        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-NC                           : T3        :        :                   :         :           :                
-GND                          : T4        : gnd    :                   :         :           :                
-GPIO_2_io[18]                : T5        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
-LED_o[5]                     : T6        : output : 3.3-V LVTTL       :         : 2         : Y              
-VCCD_PLL1                    : T7        : power  :                   : 1.2V    :           :                
-GND                          : T8        : gnd    :                   :         :           :                
-VCCIO3                       : T9        : power  :                   : 3.3V    : 3         :                
-VCCIO3                       : T10       : power  :                   : 3.3V    : 3         :                
-VCCIO3                       : T11       : power  :                   : 3.3V    : 3         :                
-VCCIO4                       : T12       : power  :                   : 3.3V    : 4         :                
-VCCIO4                       : T13       : power  :                   : 3.3V    : 4         :                
-GND                          : T14       : gnd    :                   :         :           :                
-VCCA4                        : T15       : power  :                   : 2.5V    :           :                
-GND                          : T16       : gnd    :                   :         :           :                
-VCCIO5                       : T17       : power  :                   : 3.3V    : 5         :                
-SDRAM_A[2]                   : T18       : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_A[1]                   : T19       : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_A[0]                   : T20       : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_BA[1]                  : T21       : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_A[6]                   : T22       : output : 3.3-V LVTTL       :         : 5         : Y              
-NC                           : U1        :        :                   :         :           :                
-NC                           : U2        :        :                   :         :           :                
-NC                           : U3        :        :                   :         :           :                
-NC                           : U4        :        :                   :         :           :                
-NC                           : U5        :        :                   :         :           :                
-GPIO_1_io[9]                 : U6        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_1_io[8]                 : U7        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-VCCIO3                       : U8        : power  :                   : 3.3V    : 3         :                
-VCCIO3                       : U9        : power  :                   : 3.3V    : 3         :                
-GND                          : U10       : gnd    :                   :         :           :                
-VCCIO4                       : U11       : power  :                   : 3.3V    : 4         :                
-VCCIO4                       : U12       : power  :                   : 3.3V    : 4         :                
-GND                          : U13       : gnd    :                   :         :           :                
-VCCIO4                       : U14       : power  :                   : 3.3V    : 4         :                
-GPIO_1_io[25]                : U15       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-NC                           : U16       :        :                   :         :           :                
-PMOD_C_io[1]                 : U17       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
-PMOD_C_io[0]                 : U18       : bidir  : 3.3-V LVTTL       :         : 5         : Y              
-NC                           : U19       :        :                   :         :           :                
-NC                           : U20       :        :                   :         :           :                
-SDRAM_A[10]                  : U21       : output : 3.3-V LVTTL       :         : 5         : Y              
-SDRAM_A[5]                   : U22       : output : 3.3-V LVTTL       :         : 5         : Y              
-NC                           : V1        :        :                   :         :           :                
-GND                          : V2        : gnd    :                   :         :           :                
-NC                           : V3        :        :                   :         :           :                
-LED_o[4]                     : V4        : output : 3.3-V LVTTL       :         : 3         : Y              
-PSW_i[2]                     : V5        : input  : 3.3-V LVTTL       :         : 3         : Y              
-GND                          : V6        : gnd    :                   :         :           :                
-NC                           : V7        :        :                   :         :           :                
-NC                           : V8        :        :                   :         :           :                
-GPIO_1_io[15]                : V9        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_1_io[14]                : V10       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-NC                           : V11       :        :                   :         :           :                
-NC                           : V12       :        :                   :         :           :                
-GPIO_1_io[21]                : V13       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-GPIO_1_io[23]                : V14       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-NC                           : V15       :        :                   :         :           :                
-GPIO_1_io[24]                : V16       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-GPIO_2_io[45]                : V17       : bidir  : 3.3-V LVTTL       :         : 4         : N              
-NC                           : V18       :        :                   :         :           :                
-GND                          : V19       : gnd    :                   :         :           :                
-NC                           : V20       :        :                   :         :           :                
-NC                           : V21       :        :                   :         :           :                
-NC                           : V22       :        :                   :         :           :                
-NC                           : W1        :        :                   :         :           :                
-NC                           : W2        :        :                   :         :           :                
-GPIO_1_io[4]                 : W3        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_1_io[5]                 : W4        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_1_io[7]                 : W5        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_1_io[6]                 : W6        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_1_io[11]                : W7        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_1_io[10]                : W8        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-NC                           : W9        :        :                   :         :           :                
-NC                           : W10       :        :                   :         :           :                
-NC                           : W11       :        :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W12       :        :                   :         : 4         :                
-ADT7420_SCL                  : W13       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-GPIO_1_io[20]                : W14       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-GPIO_1_io[22]                : W15       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-NC                           : W16       :        :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W17       :        :                   :         : 4         :                
-NC                           : W18       :        :                   :         :           :                
-NC                           : W19       :        :                   :         :           :                
-NC                           : W20       :        :                   :         :           :                
-GND                          : W21       : gnd    :                   :         :           :                
-NC                           : W22       :        :                   :         :           :                
-GPIO_2_io[19]                : Y1        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_2_io[20]                : Y2        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_2_io[23]                : Y3        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-GPIO_2_io[24]                : Y4        : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-NC                           : Y5        :        :                   :         :           :                
-NC                           : Y6        :        :                   :         :           :                
-NC                           : Y7        :        :                   :         :           :                
-NC                           : Y8        :        :                   :         :           :                
-GND                          : Y9        : gnd    :                   :         :           :                
-GPIO_1_io[17]                : Y10       : bidir  : 3.3-V LVTTL       :         : 3         : Y              
-NC                           : Y11       :        :                   :         :           :                
-GND                          : Y12       : gnd    :                   :         :           :                
-GPIO_1_io[19]                : Y13       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-GPIO_1_io[18]                : Y14       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-GND                          : Y15       : gnd    :                   :         :           :                
-GPIO_1_io[3]                 : Y16       : bidir  : 3.3-V LVTTL       :         : 4         : Y              
-NC                           : Y17       :        :                   :         :           :                
-NC                           : Y18       :        :                   :         :           :                
-NC                           : Y19       :        :                   :         :           :                
-NC                           : Y20       :        :                   :         :           :                
-NC                           : Y21       :        :                   :         :           :                
-NC                           : Y22       :        :                   :         :           :                
+VCC_ONE                      : 1         : power  :                   : 3.0V/3.3V :           :                
+VCCA6                        : 2         : power  :                   : 3.0V/3.3V :           :                
+ANAIN1                       : 3         :        :                   :         :           :                
+REFGND                       : 4         :        :                   :         :           :                
+ADC_VREF                     : 5         :        :                   :         :           :                
+P6                           : 6         : bidir  : 2.5 V             :         : 1A        : Y              
+P7                           : 7         : bidir  : 2.5 V             :         : 1A        : Y              
+P8                           : 8         : bidir  : 2.5 V             :         : 1A        : Y              
+VCCIO1A                      : 9         : power  :                   : 2.5V    : 1A        :                
+P10                          : 10        : bidir  : 2.5 V             :         : 1A        : Y              
+P11                          : 11        : bidir  : 2.5 V             :         : 1A        : Y              
+P12                          : 12        : bidir  : 2.5 V             :         : 1A        : Y              
+P13                          : 13        : bidir  : 2.5 V             :         : 1A        : Y              
+P14                          : 14        : bidir  : 2.5 V             :         : 1A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 15        :        :                   :         : 1B        :                
+~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 16        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+P17                          : 17        : bidir  : 2.5 V             :         : 1B        : Y              
+~ALTERA_TCK~ / RESERVED_INPUT : 18        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+~ALTERA_TDI~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 19        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+~ALTERA_TDO~                 : 20        : output : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 21        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 22        :        :                   :         : 1B        :                
+VCCIO1B                      : 23        : power  :                   : 2.5V    : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 24        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 25        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 26        :        :                   :         : 2         :                
+CK48M_i                      : 27        : input  : 2.5 V             :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 28        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 29        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 30        :        :                   :         : 2         :                
+VCCIO2                       : 31        : power  :                   : 2.5V    : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 32        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 33        :        :                   :         : 2         :                
+VCCA2                        : 34        : power  :                   : 3.0V/3.3V :           :                
+VCCA1                        : 35        : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 36        : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 37        : power  :                   : 3.0V/3.3V :           :                
+P38                          : 38        : bidir  : 2.5 V             :         : 3         : Y              
+P39                          : 39        : bidir  : 2.5 V             :         : 3         : Y              
+VCCIO3                       : 40        : power  :                   : 2.5V    : 3         :                
+P41                          : 41        : bidir  : 2.5 V             :         : 3         : Y              
+GND                          : 42        : gnd    :                   :         :           :                
+P43                          : 43        : bidir  : 2.5 V             :         : 3         : Y              
+P44                          : 44        : bidir  : 2.5 V             :         : 3         : Y              
+P45                          : 45        : bidir  : 2.5 V             :         : 3         : Y              
+P46                          : 46        : bidir  : 2.5 V             :         : 3         : Y              
+P47                          : 47        : bidir  : 2.5 V             :         : 3         : Y              
+P48                          : 48        : bidir  : 2.5 V             :         : 3         : Y              
+VCCIO3                       : 49        : power  :                   : 2.5V    : 3         :                
+P50                          : 50        : bidir  : 2.5 V             :         : 3         : Y              
+VCC_ONE                      : 51        : power  :                   : 3.0V/3.3V :           :                
+P52                          : 52        : bidir  : 2.5 V             :         : 3         : Y              
+GND                          : 53        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 54        :        :                   :         : 3         :                
+P55                          : 55        : bidir  : 2.5 V             :         : 3         : Y              
+P56                          : 56        : bidir  : 2.5 V             :         : 3         : Y              
+P57                          : 57        : bidir  : 2.5 V             :         : 3         : Y              
+P58                          : 58        : bidir  : 2.5 V             :         : 3         : Y              
+P59                          : 59        : bidir  : 2.5 V             :         : 3         : Y              
+P60                          : 60        : bidir  : 2.5 V             :         : 3         : Y              
+P61                          : 61        : bidir  : 2.5 V             :         : 4         : Y              
+P62                          : 62        : bidir  : 2.5 V             :         : 4         : Y              
+GND                          : 63        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 64        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 65        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 66        :        :                   :         : 4         :                
+VCCIO4                       : 67        : power  :                   : 2.5V    : 4         :                
+GND                          : 68        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 69        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 70        :        :                   :         : 4         :                
+VCCA5                        : 71        : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 72        : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 73        : power  :                   : 3.0V/3.3V :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 74        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 75        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 76        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 77        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 78        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 79        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 80        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 81        :        :                   :         : 5         :                
+VCCIO5                       : 82        : power  :                   : 2.5V    : 5         :                
+GND                          : 83        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 84        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 87        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 88        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 89        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 90        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 91        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 92        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 93        :        :                   :         : 6         :                
+VCCIO6                       : 94        : power  :                   : 2.5V    : 6         :                
+GND                          : 95        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 96        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 97        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 98        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 99        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 100       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 101       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 102       :        :                   :         : 6         :                
+VCCIO6                       : 103       : power  :                   : 2.5V    : 6         :                
+GND                          : 104       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 105       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 106       :        :                   :         : 6         :                
+VCCA3                        : 107       : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 108       : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 109       : power  :                   : 3.0V/3.3V :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 110       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 111       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 112       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 113       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 114       :        :                   :         : 7         :                
+VCC_ONE                      : 115       : power  :                   : 3.0V/3.3V :           :                
+GND                          : 116       : gnd    :                   :         :           :                
+VCCIO7                       : 117       : power  :                   : 2.5V    : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 118       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 119       :        :                   :         : 7         :                
+XLED_R_o                     : 120       : output : 2.5 V             :         : 8         : Y              
+XLED_B_o                     : 121       : output : 2.5 V             :         : 8         : Y              
+XLED_G_o                     : 122       : output : 2.5 V             :         : 8         : Y              
+XPSW_i                       : 123       : input  : 2.5 V             :         : 8         : Y              
+P124                         : 124       : bidir  : 2.5 V             :         : 8         : Y              
+GND                          : 125       : gnd    :                   :         :           :                
+~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : 126       : input  : 2.5 V             :         : 8         : N              
+P127                         : 127       : bidir  : 2.5 V             :         : 8         : Y              
+VCCIO8                       : 128       : power  :                   : 2.5V    : 8         :                
+~ALTERA_nCONFIG~ / RESERVED_INPUT : 129       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+P130                         : 130       : bidir  : 2.5 V             :         : 8         : Y              
+P131                         : 131       : bidir  : 2.5 V             :         : 8         : Y              
+P132                         : 132       : bidir  : 2.5 V             :         : 8         : Y              
+GND                          : 133       : gnd    :                   :         :           :                
+P134                         : 134       : bidir  : 2.5 V             :         : 8         : Y              
+P135                         : 135       : bidir  : 2.5 V             :         : 8         : Y              
+~ALTERA_nSTATUS~ / RESERVED_INPUT : 136       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+GND                          : 137       : gnd    :                   :         :           :                
+~ALTERA_CONF_DONE~ / RESERVED_INPUT : 138       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+VCCIO8                       : 139       : power  :                   : 2.5V    : 8         :                
+P140                         : 140       : bidir  : 2.5 V             :         : 8         : Y              
+P141                         : 141       : bidir  : 2.5 V             :         : 8         : Y              
+GND                          : 142       : gnd    :                   :         :           :                
+VCCA4                        : 143       : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 144       : power  :                   : 3.0V/3.3V :           :                

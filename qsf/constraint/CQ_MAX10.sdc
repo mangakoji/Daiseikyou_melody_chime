@@ -27,7 +27,7 @@
 # User Clock Setting
 # ------------------------------------------
 
-create_clock -period "20.000 ns" -name {CK_50M} {CLK_50M_i}
+create_clock -period "20.833 ns" -name {CK_48M} {CK48M_i}
 
 
 # ---------------------------------------------
