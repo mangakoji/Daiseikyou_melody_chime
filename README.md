@@ -24,6 +24,6 @@ CQ 出版製 MAX10 EVA board でメロディチャイムを再生するサンプ
 
 ライセンス
 =========
-ほぼ@osafune氏の横転です。
+ほぼ@s_osafune氏の横転です。
 
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
