@@ -1,5 +1,5 @@
 Fitter report for melodychime_top
-Sun Mar 12 23:50:29 2017
+Mon Mar 13 22:11:06 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -22,29 +22,25 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
  14. Dual Purpose and Dedicated Pins
  15. I/O Bank Usage
  16. All Package Pins
- 17. PLL Summary
- 18. PLL Usage
- 19. I/O Assignment Warnings
- 20. Fitter Resource Utilization by Entity
- 21. Delay Chain Summary
- 22. Pad To Core Delay Chain Fanout
- 23. Control Signals
- 24. Global & Other Fast Signals
- 25. Routing Usage Summary
- 26. LAB Logic Elements
- 27. LAB-wide Signals
- 28. LAB Signals Sourced
- 29. LAB Signals Sourced Out
- 30. LAB Distinct Inputs
- 31. I/O Rules Summary
- 32. I/O Rules Details
- 33. I/O Rules Matrix
- 34. Fitter Device Options
- 35. Operating Settings and Conditions
- 36. Estimated Delay Added for Hold Timing Summary
- 37. Estimated Delay Added for Hold Timing Details
- 38. Fitter Messages
- 39. Fitter Suppressed Messages
+ 17. I/O Assignment Warnings
+ 18. Fitter Resource Utilization by Entity
+ 19. Delay Chain Summary
+ 20. Pad To Core Delay Chain Fanout
+ 21. Control Signals
+ 22. Global & Other Fast Signals
+ 23. Routing Usage Summary
+ 24. LAB Logic Elements
+ 25. LAB-wide Signals
+ 26. LAB Signals Sourced
+ 27. LAB Signals Sourced Out
+ 28. LAB Distinct Inputs
+ 29. I/O Rules Summary
+ 30. I/O Rules Details
+ 31. I/O Rules Matrix
+ 32. Fitter Device Options
+ 33. Operating Settings and Conditions
+ 34. Fitter Messages
+ 35. Fitter Suppressed Messages
 
 
 
@@ -71,7 +67,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Mar 12 23:50:29 2017       ;
+; Fitter Status                      ; Successful - Mon Mar 13 22:11:06 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; melodychime_top                             ;
 ; Top-level Entity Name              ; TOP                                         ;
@@ -79,14 +75,14 @@ agreement for further details.
 ; Device                             ; 10M08SAE144C8G                              ;
 ; Timing Models                      ; Final                                       ;
 ; Total logic elements               ; 256 / 8,064 ( 3 % )                         ;
-;     Total combinational functions  ; 244 / 8,064 ( 3 % )                         ;
+;     Total combinational functions  ; 243 / 8,064 ( 3 % )                         ;
 ;     Dedicated logic registers      ; 125 / 8,064 ( 2 % )                         ;
 ; Total registers                    ; 125                                         ;
 ; Total pins                         ; 42 / 101 ( 42 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 387,072 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 48 ( 0 % )                              ;
-; Total PLLs                         ; 1 / 1 ( 100 % )                             ;
+; Total PLLs                         ; 0 / 1 ( 0 % )                               ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
 ; ADC blocks                         ; 0 / 1 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -163,7 +159,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.9%      ;
+;     Processor 2            ;   3.6%      ;
 +----------------------------+-------------+
 
 
@@ -173,8 +169,8 @@ agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 510 ) ; 0.00 % ( 0 / 510 )         ; 0.00 % ( 0 / 510 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 510 ) ; 0.00 % ( 0 / 510 )         ; 0.00 % ( 0 / 510 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 508 ) ; 0.00 % ( 0 / 508 )         ; 0.00 % ( 0 / 508 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 508 ) ; 0.00 % ( 0 / 508 )         ; 0.00 % ( 0 / 508 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -198,7 +194,7 @@ agreement for further details.
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Top                            ; 0.00 % ( 0 / 492 )    ; N/A                     ; Source File       ; N/A                 ;       ;
-; hard_block:auto_generated_inst ; 0.00 % ( 0 / 18 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
 
@@ -215,17 +211,17 @@ The pin-out file can be found in D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qs
 +---------------------------------------------+---------------------+
 ; Total logic elements                        ; 256 / 8,064 ( 3 % ) ;
 ;     -- Combinational with no register       ; 131                 ;
-;     -- Register only                        ; 12                  ;
-;     -- Combinational with a register        ; 113                 ;
+;     -- Register only                        ; 13                  ;
+;     -- Combinational with a register        ; 112                 ;
 ;                                             ;                     ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 59                  ;
+;     -- 4 input functions                    ; 58                  ;
 ;     -- 3 input functions                    ; 61                  ;
 ;     -- <=2 input functions                  ; 124                 ;
-;     -- Register only                        ; 12                  ;
+;     -- Register only                        ; 13                  ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 114                 ;
+;     -- normal mode                          ; 113                 ;
 ;     -- arithmetic mode                      ; 130                 ;
 ;                                             ;                     ;
 ; Total registers*                            ; 125 / 8,542 ( 1 % ) ;
@@ -244,7 +240,7 @@ The pin-out file can be found in D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qs
 ; Total block memory bits                     ; 0 / 387,072 ( 0 % ) ;
 ; Total block memory implementation bits      ; 0 / 387,072 ( 0 % ) ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 48 ( 0 % )      ;
-; PLLs                                        ; 1 / 1 ( 100 % )     ;
+; PLLs                                        ; 0 / 1 ( 0 % )       ;
 ; Global signals                              ; 1                   ;
 ;     -- Global clocks                        ; 1 / 10 ( 10 % )     ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )       ;
@@ -252,10 +248,10 @@ The pin-out file can be found in D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qs
 ; Remote update blocks                        ; 0 / 1 ( 0 % )       ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )       ;
 ; Average interconnect usage (total/H/V)      ; 0.5% / 0.3% / 0.6%  ;
-; Peak interconnect usage (total/H/V)         ; 2.1% / 1.3% / 3.1%  ;
+; Peak interconnect usage (total/H/V)         ; 2.2% / 1.4% / 3.2%  ;
 ; Maximum fan-out                             ; 125                 ;
 ; Highest non-global fan-out                  ; 26                  ;
-; Total fan-out                               ; 1177                ;
+; Total fan-out                               ; 1171                ;
 ; Average fan-out                             ; 2.26                ;
 +---------------------------------------------+---------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -271,17 +267,17 @@ The pin-out file can be found in D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qs
 ;                                             ;                    ;                                ;
 ; Total logic elements                        ; 256 / 8064 ( 3 % ) ; 0 / 8064 ( 0 % )               ;
 ;     -- Combinational with no register       ; 131                ; 0                              ;
-;     -- Register only                        ; 12                 ; 0                              ;
-;     -- Combinational with a register        ; 113                ; 0                              ;
+;     -- Register only                        ; 13                 ; 0                              ;
+;     -- Combinational with a register        ; 112                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic element usage by number of LUT inputs ;                    ;                                ;
-;     -- 4 input functions                    ; 59                 ; 0                              ;
+;     -- 4 input functions                    ; 58                 ; 0                              ;
 ;     -- 3 input functions                    ; 61                 ; 0                              ;
 ;     -- <=2 input functions                  ; 124                ; 0                              ;
-;     -- Register only                        ; 12                 ; 0                              ;
+;     -- Register only                        ; 13                 ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic elements by mode                      ;                    ;                                ;
-;     -- normal mode                          ; 114                ; 0                              ;
+;     -- normal mode                          ; 113                ; 0                              ;
 ;     -- arithmetic mode                      ; 130                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Total registers                             ; 125                ; 0                              ;
@@ -295,28 +291,27 @@ The pin-out file can be found in D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qs
 ; Embedded Multiplier 9-bit elements          ; 0 / 48 ( 0 % )     ; 0 / 48 ( 0 % )                 ;
 ; Total memory bits                           ; 0                  ; 0                              ;
 ; Total RAM block bits                        ; 0                  ; 0                              ;
-; PLL                                         ; 0 / 1 ( 0 % )      ; 1 / 1 ( 100 % )                ;
-; Clock control block                         ; 0 / 12 ( 0 % )     ; 1 / 12 ( 8 % )                 ;
+; Clock control block                         ; 1 / 12 ( 8 % )     ; 0 / 12 ( 0 % )                 ;
 ; User Flash Memory                           ; 1 / 1 ( 100 % )    ; 0 / 1 ( 0 % )                  ;
 ; Analog-to-Digital Converter                 ; 1 / 1 ( 100 % )    ; 0 / 1 ( 0 % )                  ;
 ;                                             ;                    ;                                ;
 ; Connections                                 ;                    ;                                ;
-;     -- Input Connections                    ; 162                ; 1                              ;
-;     -- Registered Input Connections         ; 125                ; 0                              ;
-;     -- Output Connections                   ; 38                 ; 125                            ;
+;     -- Input Connections                    ; 37                 ; 0                              ;
+;     -- Registered Input Connections         ; 0                  ; 0                              ;
+;     -- Output Connections                   ; 37                 ; 0                              ;
 ;     -- Registered Output Connections        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Internal Connections                        ;                    ;                                ;
-;     -- Total Connections                    ; 1175               ; 136                            ;
-;     -- Registered Connections               ; 622                ; 0                              ;
+;     -- Total Connections                    ; 1171               ; 8                              ;
+;     -- Registered Connections               ; 496                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; External Connections                        ;                    ;                                ;
-;     -- Top                                  ; 74                 ; 126                            ;
-;     -- hard_block:auto_generated_inst       ; 126                ; 0                              ;
+;     -- Top                                  ; 74                 ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Partition Interface                         ;                    ;                                ;
-;     -- Input Ports                          ; 2                  ; 1                              ;
-;     -- Output Ports                         ; 3                  ; 1                              ;
+;     -- Input Ports                          ; 2                  ; 0                              ;
+;     -- Output Ports                         ; 3                  ; 0                              ;
 ;     -- Bidir Ports                          ; 37                 ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Registered Ports                            ;                    ;                                ;
@@ -340,7 +335,7 @@ The pin-out file can be found in D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qs
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; CK48M_i ; 27    ; 2        ; 0            ; 7            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; CK48M_i ; 27    ; 2        ; 0            ; 7            ; 21           ; 125                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; XPSW_i  ; 123   ; 8        ; 13           ; 25           ; 28           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
@@ -590,56 +585,6 @@ The pin-out file can be found in D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qs
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+------------------------------------------------------------------------------------------------+
-; PLL Summary                                                                                    ;
-+-------------------------------+----------------------------------------------------------------+
-; Name                          ; PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|pll1 ;
-+-------------------------------+----------------------------------------------------------------+
-; SDC pin name                  ; PLL|altpll_component|auto_generated|pll1                       ;
-; PLL mode                      ; Normal                                                         ;
-; Compensate clock              ; clock0                                                         ;
-; Compensated input/output pins ; --                                                             ;
-; Switchover type               ; --                                                             ;
-; Input frequency 0             ; 48.0 MHz                                                       ;
-; Input frequency 1             ; --                                                             ;
-; Nominal PFD frequency         ; 24.0 MHz                                                       ;
-; Nominal VCO frequency         ; 600.0 MHz                                                      ;
-; VCO post scale K counter      ; 2                                                              ;
-; VCO frequency control         ; Auto                                                           ;
-; VCO phase shift step          ; 208 ps                                                         ;
-; VCO multiply                  ; --                                                             ;
-; VCO divide                    ; --                                                             ;
-; Freq min lock                 ; 24.0 MHz                                                       ;
-; Freq max lock                 ; 52.02 MHz                                                      ;
-; M VCO Tap                     ; 0                                                              ;
-; M Initial                     ; 1                                                              ;
-; M value                       ; 25                                                             ;
-; N value                       ; 2                                                              ;
-; Charge pump current           ; setting 1                                                      ;
-; Loop filter resistance        ; setting 24                                                     ;
-; Loop filter capacitance       ; setting 0                                                      ;
-; Bandwidth                     ; 450 kHz to 980 kHz                                             ;
-; Bandwidth type                ; Medium                                                         ;
-; Real time reconfigurable      ; Off                                                            ;
-; Scan chain MIF file           ; --                                                             ;
-; Preserve PLL counter order    ; Off                                                            ;
-; PLL location                  ; PLL_1                                                          ;
-; Inclk0 signal                 ; CK48M_i                                                        ;
-; Inclk1 signal                 ; --                                                             ;
-; Inclk0 signal type            ; Dedicated Pin                                                  ;
-; Inclk1 signal type            ; --                                                             ;
-+-------------------------------+----------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; PLL Usage                                                                                                                                                                                                                                                                                            ;
-+----------------------------------------------------------------------------+--------------+------+-----+------------------+-------------+------------------+------------+---------+---------------+------------+---------------+---------+---------+-------------------------------------------------+
-; Name                                                                       ; Output Clock ; Mult ; Div ; Output Frequency ; Phase Shift ; Phase Shift Step ; Duty Cycle ; Counter ; Counter Value ; High / Low ; Cascade Input ; Initial ; VCO Tap ; SDC Pin Name                                    ;
-+----------------------------------------------------------------------------+--------------+------+-----+------------------+-------------+------------------+------------+---------+---------------+------------+---------------+---------+---------+-------------------------------------------------+
-; PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] ; clock0       ; 25   ; 24  ; 50.0 MHz         ; 0 (0 ps)    ; 3.75 (208 ps)    ; 50/50      ; C0      ; 12            ; 6/6 Even   ; --            ; 1       ; 0       ; PLL|altpll_component|auto_generated|pll1|clk[0] ;
-+----------------------------------------------------------------------------+--------------+------+-----+------------------+-------------+------------------+------------+---------+---------------+------------+---------------+---------+---------+-------------------------------------------------+
-
-
 +-------------------------------------------------+
 ; I/O Assignment Warnings                         ;
 +----------+--------------------------------------+
@@ -688,20 +633,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------+--------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                              ;
-+----------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node             ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                            ; Entity Name     ; Library Name ;
-+----------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------------+-----------------+--------------+
-; |TOP                                   ; 256 (1)     ; 125 (0)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 42   ; 0            ; 131 (1)      ; 12 (0)            ; 113 (0)          ; 0          ; |TOP                                                           ; TOP             ; work         ;
-;    |PLL:PLL|                           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |TOP|PLL:PLL                                                   ; PLL             ; work         ;
-;       |altpll:altpll_component|        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |TOP|PLL:PLL|altpll:altpll_component                           ; altpll          ; work         ;
-;          |PLL_altpll:auto_generated|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0          ; |TOP|PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated ; PLL_altpll      ; work         ;
-;    |melodychime_top:u_melodychime_top| ; 255 (53)    ; 125 (33)                  ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 130 (20)     ; 12 (4)            ; 113 (29)         ; 0          ; |TOP|melodychime_top:u_melodychime_top                         ; melodychime_top ; work         ;
-;       |melodychime_seq:U_SEQ|          ; 62 (62)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 34 (34)          ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ   ; melodychime_seq ; work         ;
-;       |melodychime_sg:U_SG0|           ; 74 (74)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 41 (41)      ; 8 (8)             ; 25 (25)          ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG0    ; melodychime_sg  ; work         ;
-;       |melodychime_sg:U_SG1|           ; 74 (74)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 41 (41)      ; 0 (0)             ; 33 (33)          ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG1    ; melodychime_sg  ; work         ;
-+----------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------------+-----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                            ;
++----------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node             ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                          ; Entity Name     ; Library Name ;
++----------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------------------+-----------------+--------------+
+; |TOP                                   ; 256 (1)     ; 125 (0)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 42   ; 0            ; 131 (1)      ; 13 (0)            ; 112 (0)          ; 0          ; |TOP                                                         ; TOP             ; work         ;
+;    |melodychime_top:u_melodychime_top| ; 255 (52)    ; 125 (33)                  ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 130 (19)     ; 13 (4)            ; 112 (29)         ; 0          ; |TOP|melodychime_top:u_melodychime_top                       ; melodychime_top ; work         ;
+;       |melodychime_seq:U_SEQ|          ; 63 (63)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 1 (1)             ; 33 (33)          ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ ; melodychime_seq ; work         ;
+;       |melodychime_sg:U_SG0|           ; 74 (74)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 41 (41)      ; 8 (8)             ; 25 (25)          ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG0  ; melodychime_sg  ; work         ;
+;       |melodychime_sg:U_SG1|           ; 74 (74)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 41 (41)      ; 0 (0)             ; 33 (33)          ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG1  ; melodychime_sg  ; work         ;
++----------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -750,8 +692,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; P13      ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; P14      ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; P17      ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; CK48M_i  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; XPSW_i   ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; CK48M_i  ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; XPSW_i   ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -799,7 +741,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; P17                                                             ;                   ;         ;
 ; CK48M_i                                                         ;                   ;         ;
 ; XPSW_i                                                          ;                   ;         ;
-;      - melodychime_top:u_melodychime_top|start_in_reg[0]~feeder ; 1                 ; 6       ;
+;      - melodychime_top:u_melodychime_top|start_in_reg[0]~feeder ; 0                 ; 6       ;
 +-----------------------------------------------------------------+-------------------+---------+
 
 
@@ -808,33 +750,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                       ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CK48M_i                                                                    ; PIN_27             ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1              ; 125     ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; melodychime_top:u_melodychime_top|Equal0~2                                 ; LCCOMB_X22_Y23_N28 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|scorecount[0]~7    ; LCCOMB_X19_Y23_N22 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|slotcount          ; FF_X19_Y23_N5      ; 9       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|start_reg          ; FF_X19_Y23_N21     ; 7       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|tempo_out          ; LCCOMB_X22_Y19_N30 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|wrreq_reg[0]       ; FF_X19_Y23_N1      ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|wrreq_reg[1]       ; FF_X19_Y23_N19     ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_sg:U_SG0|Equal0~2            ; LCCOMB_X16_Y21_N30 ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_sg:U_SG0|env_count_reg[1]~66 ; LCCOMB_X17_Y17_N28 ; 15      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_sg:U_SG0|note_reg            ; FF_X17_Y23_N9      ; 17      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_sg:U_SG1|Equal0~2            ; LCCOMB_X23_Y22_N6  ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_sg:U_SG1|env_count_reg[1]~66 ; LCCOMB_X20_Y23_N30 ; 15      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|melodychime_sg:U_SG1|note_reg            ; FF_X20_Y23_N25     ; 17      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|timing_10us_reg                          ; FF_X22_Y23_N31     ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; melodychime_top:u_melodychime_top|timing_1ms_reg                           ; FF_X22_Y23_N1      ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; CK48M_i                                                                    ; PIN_27             ; 125     ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; melodychime_top:u_melodychime_top|Equal0~2                                 ; LCCOMB_X17_Y17_N26 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|scorecount[0]~7    ; LCCOMB_X18_Y19_N22 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|slotcount          ; FF_X18_Y19_N5      ; 9       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|start_reg          ; FF_X18_Y19_N21     ; 7       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|tempo_out          ; LCCOMB_X18_Y19_N8  ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|wrreq_reg[0]       ; FF_X18_Y19_N1      ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|wrreq_reg[1]       ; FF_X18_Y19_N3      ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_sg:U_SG0|Equal0~2            ; LCCOMB_X16_Y13_N26 ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_sg:U_SG0|env_count_reg[1]~66 ; LCCOMB_X15_Y19_N30 ; 15      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_sg:U_SG0|note_reg            ; FF_X15_Y19_N25     ; 17      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_sg:U_SG1|Equal0~2            ; LCCOMB_X17_Y14_N22 ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_sg:U_SG1|env_count_reg[1]~66 ; LCCOMB_X16_Y11_N28 ; 15      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|melodychime_sg:U_SG1|note_reg            ; FF_X16_Y13_N1      ; 17      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|timing_10us_reg                          ; FF_X16_Y13_N3      ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; melodychime_top:u_melodychime_top|timing_1ms_reg                           ; FF_X17_Y17_N19     ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                                                  ;
-+----------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                                                                       ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1    ; 125     ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
-+----------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                               ;
++---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name    ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; CK48M_i ; PIN_27   ; 125     ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
++---------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +------------------------------------------------+
@@ -842,14 +783,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 226 / 27,275 ( < 1 % ) ;
-; C16 interconnects     ; 0 / 1,240 ( 0 % )      ;
-; C4 interconnects      ; 148 / 20,832 ( < 1 % ) ;
-; Direct links          ; 31 / 27,275 ( < 1 % )  ;
+; Block interconnects   ; 225 / 27,275 ( < 1 % ) ;
+; C16 interconnects     ; 2 / 1,240 ( < 1 % )    ;
+; C4 interconnects      ; 135 / 20,832 ( < 1 % ) ;
+; Direct links          ; 42 / 27,275 ( < 1 % )  ;
 ; Global clocks         ; 1 / 10 ( 10 % )        ;
-; Local interconnects   ; 131 / 8,064 ( 2 % )    ;
-; R24 interconnects     ; 0 / 1,320 ( 0 % )      ;
-; R4 interconnects      ; 98 / 28,560 ( < 1 % )  ;
+; Local interconnects   ; 132 / 8,064 ( 2 % )    ;
+; R24 interconnects     ; 1 / 1,320 ( < 1 % )    ;
+; R4 interconnects      ; 100 / 28,560 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
@@ -858,70 +799,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------+------------------------------+
 ; Number of Logic Elements  (Average = 9.48) ; Number of LABs  (Total = 27) ;
 +--------------------------------------------+------------------------------+
-; 1                                          ; 7                            ;
+; 1                                          ; 6                            ;
 ; 2                                          ; 2                            ;
 ; 3                                          ; 1                            ;
 ; 4                                          ; 1                            ;
 ; 5                                          ; 0                            ;
 ; 6                                          ; 0                            ;
 ; 7                                          ; 0                            ;
-; 8                                          ; 0                            ;
+; 8                                          ; 1                            ;
 ; 9                                          ; 0                            ;
-; 10                                         ; 1                            ;
-; 11                                         ; 0                            ;
+; 10                                         ; 0                            ;
+; 11                                         ; 2                            ;
 ; 12                                         ; 2                            ;
 ; 13                                         ; 0                            ;
-; 14                                         ; 1                            ;
-; 15                                         ; 2                            ;
-; 16                                         ; 10                           ;
+; 14                                         ; 3                            ;
+; 15                                         ; 1                            ;
+; 16                                         ; 8                            ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.30) ; Number of LABs  (Total = 27) ;
+; LAB-wide Signals  (Average = 1.15) ; Number of LABs  (Total = 27) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 19                           ;
-; 1 Clock enable                     ; 12                           ;
+; 1 Clock                            ; 17                           ;
+; 1 Clock enable                     ; 9                            ;
 ; 1 Sync. clear                      ; 1                            ;
-; 1 Sync. load                       ; 3                            ;
+; 1 Sync. load                       ; 4                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 13.00) ; Number of LABs  (Total = 27) ;
+; Number of Signals Sourced  (Average = 12.96) ; Number of LABs  (Total = 27) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 4                            ;
 ; 2                                            ; 4                            ;
-; 3                                            ; 1                            ;
-; 4                                            ; 0                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
+; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 3                            ;
-; 11                                           ; 2                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 3                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
+; 14                                           ; 1                            ;
 ; 15                                           ; 0                            ;
 ; 16                                           ; 0                            ;
 ; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 1                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 0                            ;
+; 21                                           ; 2                            ;
 ; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 2                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 3                            ;
 ; 25                                           ; 2                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 2                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 1                            ;
 ; 28                                           ; 0                            ;
 ; 29                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
@@ -930,22 +871,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 5.41) ; Number of LABs  (Total = 27) ;
+; Number of Signals Sourced Out  (Average = 5.22) ; Number of LABs  (Total = 27) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 8                            ;
+; 1                                               ; 9                            ;
 ; 2                                               ; 4                            ;
-; 3                                               ; 1                            ;
+; 3                                               ; 2                            ;
 ; 4                                               ; 1                            ;
-; 5                                               ; 2                            ;
-; 6                                               ; 3                            ;
+; 5                                               ; 0                            ;
+; 6                                               ; 2                            ;
 ; 7                                               ; 0                            ;
-; 8                                               ; 0                            ;
+; 8                                               ; 1                            ;
 ; 9                                               ; 2                            ;
 ; 10                                              ; 1                            ;
 ; 11                                              ; 1                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 2                            ;
+; 12                                              ; 1                            ;
+; 13                                              ; 1                            ;
 ; 14                                              ; 1                            ;
 ; 15                                              ; 0                            ;
 ; 16                                              ; 1                            ;
@@ -955,27 +896,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.04) ; Number of LABs  (Total = 27) ;
+; Number of Distinct Inputs  (Average = 7.93) ; Number of LABs  (Total = 27) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
 ; 2                                           ; 4                            ;
 ; 3                                           ; 4                            ;
-; 4                                           ; 4                            ;
-; 5                                           ; 1                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 2                            ;
 ; 6                                           ; 2                            ;
 ; 7                                           ; 1                            ;
-; 8                                           ; 0                            ;
+; 8                                           ; 1                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 2                            ;
+; 10                                          ; 2                            ;
+; 11                                          ; 2                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 1                            ;
 ; 14                                          ; 0                            ;
 ; 15                                          ; 0                            ;
 ; 16                                          ; 2                            ;
 ; 17                                          ; 2                            ;
-; 18                                          ; 3                            ;
+; 18                                          ; 0                            ;
+; 19                                          ; 0                            ;
+; 20                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -1122,31 +1065,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                                     ;
-+-----------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------+
-; Source Register                                                       ; Destination Register                                                  ; Delay Added in ns ;
-+-----------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------+
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|slot_reg      ; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|wrreq_reg[1]  ; 0.020             ;
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|tempocount[0] ; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|tempocount[7] ; 0.014             ;
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|slotcount     ; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|wrreq_reg[1]  ; 0.011             ;
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|play_reg      ; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|slot_reg      ; 0.011             ;
-; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|start_reg     ; melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|play_reg      ; 0.011             ;
-; melodychime_top:u_melodychime_top|count1ms[6]                         ; melodychime_top:u_melodychime_top|count1ms[6]                         ; 0.010             ;
-; melodychime_top:u_melodychime_top|count10us[8]                        ; melodychime_top:u_melodychime_top|count10us[8]                        ; 0.010             ;
-+-----------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 7 path(s) that have the largest delay added for hold.
-
-
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
@@ -1155,8 +1073,6 @@ Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors
 Info (119006): Selected device 10M08SAE144C8G for design "melodychime_top"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (15535): Implemented PLL "PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|pll1" as MAX 10 PLL type File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/db/pll_altpll.v Line: 51
-    Info (15099): Implementing clock multiplication of 25, clock division of 24, and phase shift of 0 degrees (0 ps) for PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] port File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/db/pll_altpll.v Line: 51
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Critical Warning (16562): Review the PowerPlay Power Analyzer report file (<design>.pow.rpt) to ensure your design is within the maximum power utilization limit of the single power-supply target device and to avoid functional failures.
@@ -1179,11 +1095,7 @@ Info (12825): Data[1]/ASDO dual-purpose pin not reserved
 Info (12825): nCSO dual-purpose pin not reserved
 Info (12825): DCLK dual-purpose pin not reserved
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Info (176353): Automatically promoted node PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/db/pll_altpll.v Line: 93
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
 Info (332104): Reading SDC File: 'constraint/CQ_MAX10.sdc'
-Warning (332056): PLL cross checking found inconsistent PLL clock settings:
-    Warning (332056): Node: PLL|altpll_component|auto_generated|pll1|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.833
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning (332169): From CK_48M (Rise) to CK_48M (Rise) (setup and hold)
 Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
@@ -1191,10 +1103,12 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):   20.833       CK_48M
+Info (176353): Automatically promoted node CK48M_i~input (placed in PIN 27 (CLK0p, DIFFIO_RX_L18p, DIFFOUT_L18p, High_Speed)) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 15
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1203,12 +1117,12 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X10_Y13 to location X20_Y25
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X10_Y13 to location X20_Y25
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.24 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.12 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1253,11 +1167,11 @@ Warning (169064): Following 37 pins have no output enable or a GND or VCC output
     Info (169065): Pin P14 has a permanently enabled output enable File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 58
     Info (169065): Pin P17 has a permanently enabled output enable File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
 Info (144001): Generated suppressed messages file D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/output_files/melodychime_top.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 1169 megabytes
-    Info: Processing ended: Sun Mar 12 23:50:31 2017
+Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 1173 megabytes
+    Info: Processing ended: Mon Mar 13 22:11:08 2017
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+

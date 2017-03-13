@@ -45,7 +45,7 @@ entity melodychime_top is
 end melodychime_top;
 
 architecture RTL of melodychime_top is
-	constant SYSTEMCLOCK_FREQ	: integer := 50000000;		-- 50MHz(DE0)
+	constant SYSTEMCLOCK_FREQ	: integer := 48000000;		--48MHz(CQMAX10)/ 50MHz(DE0)
 	constant CLOCKDIV_NUM		: integer := SYSTEMCLOCK_FREQ/100000;
 	signal count10us		: integer range 0 to CLOCKDIV_NUM-1;
 	signal count1ms			: integer range 0 to 99;

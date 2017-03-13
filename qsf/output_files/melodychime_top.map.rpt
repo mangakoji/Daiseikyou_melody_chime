@@ -1,5 +1,5 @@
 Analysis & Synthesis report for melodychime_top
-Sun Mar 12 23:50:14 2017
+Mon Mar 13 22:10:54 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -55,20 +55,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 12 23:50:14 2017       ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 13 22:10:54 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; melodychime_top                             ;
 ; Top-level Entity Name              ; TOP                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 255                                         ;
-;     Total combinational functions  ; 244                                         ;
+; Total logic elements               ; 254                                         ;
+;     Total combinational functions  ; 243                                         ;
 ;     Dedicated logic registers      ; 125                                         ;
 ; Total registers                    ; 125                                         ;
 ; Total pins                         ; 42                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 1                                           ;
+; Total PLLs                         ; 0                                           ;
 ; UFM blocks                         ; 0                                           ;
 ; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -82,6 +82,7 @@ agreement for further details.
 ; Device                                                                     ; 10M08SAE144C8G     ;                    ;
 ; Top-level entity name                                                      ; TOP                ; melodychime_top    ;
 ; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; HDL message level                                                          ; Level3             ; Level2             ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -142,7 +143,6 @@ agreement for further details.
 ; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
 ; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
 ; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
 ; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
@@ -196,55 +196,49 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                              ;
-+---------------------------------------------+----------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                      ;
-+---------------------------------------------+----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 255                                                                        ;
-;                                             ;                                                                            ;
-; Total combinational functions               ; 244                                                                        ;
-; Logic element usage by number of LUT inputs ;                                                                            ;
-;     -- 4 input functions                    ; 59                                                                         ;
-;     -- 3 input functions                    ; 61                                                                         ;
-;     -- <=2 input functions                  ; 124                                                                        ;
-;                                             ;                                                                            ;
-; Logic elements by mode                      ;                                                                            ;
-;     -- normal mode                          ; 114                                                                        ;
-;     -- arithmetic mode                      ; 130                                                                        ;
-;                                             ;                                                                            ;
-; Total registers                             ; 125                                                                        ;
-;     -- Dedicated logic registers            ; 125                                                                        ;
-;     -- I/O registers                        ; 0                                                                          ;
-;                                             ;                                                                            ;
-; I/O pins                                    ; 42                                                                         ;
-;                                             ;                                                                            ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                          ;
-;                                             ;                                                                            ;
-; Total PLLs                                  ; 1                                                                          ;
-;     -- PLLs                                 ; 1                                                                          ;
-;                                             ;                                                                            ;
-; Maximum fan-out node                        ; PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 126                                                                        ;
-; Total fan-out                               ; 1156                                                                       ;
-; Average fan-out                             ; 2.35                                                                       ;
-+---------------------------------------------+----------------------------------------------------------------------------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 254           ;
+;                                             ;               ;
+; Total combinational functions               ; 243           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 58            ;
+;     -- 3 input functions                    ; 61            ;
+;     -- <=2 input functions                  ; 124           ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 113           ;
+;     -- arithmetic mode                      ; 130           ;
+;                                             ;               ;
+; Total registers                             ; 125           ;
+;     -- Dedicated logic registers            ; 125           ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 42            ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; CK48M_i~input ;
+; Maximum fan-out                             ; 125           ;
+; Total fan-out                               ; 1150          ;
+; Average fan-out                             ; 2.35          ;
++---------------------------------------------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
-+----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                            ; Entity Name     ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------+-----------------+--------------+
-; |TOP                                   ; 244 (1)             ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 42   ; 0            ; 0          ; |TOP                                                           ; TOP             ; work         ;
-;    |PLL:PLL|                           ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|PLL:PLL                                                   ; PLL             ; work         ;
-;       |altpll:altpll_component|        ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|PLL:PLL|altpll:altpll_component                           ; altpll          ; work         ;
-;          |PLL_altpll:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated ; PLL_altpll      ; work         ;
-;    |melodychime_top:u_melodychime_top| ; 243 (49)            ; 125 (33)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top                         ; melodychime_top ; work         ;
-;       |melodychime_seq:U_SEQ|          ; 62 (62)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ   ; melodychime_seq ; work         ;
-;       |melodychime_sg:U_SG0|           ; 66 (66)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG0    ; melodychime_sg  ; work         ;
-;       |melodychime_sg:U_SG1|           ; 66 (66)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG1    ; melodychime_sg  ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------+-----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                          ; Entity Name     ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------+-----------------+--------------+
+; |TOP                                   ; 243 (1)             ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 42   ; 0            ; 0          ; |TOP                                                         ; TOP             ; work         ;
+;    |melodychime_top:u_melodychime_top| ; 242 (48)            ; 125 (33)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top                       ; melodychime_top ; work         ;
+;       |melodychime_seq:U_SEQ|          ; 62 (62)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ ; melodychime_seq ; work         ;
+;       |melodychime_sg:U_SG0|           ; 66 (66)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG0  ; melodychime_sg  ; work         ;
+;       |melodychime_sg:U_SG1|           ; 66 (66)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG1  ; melodychime_sg  ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -277,7 +271,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP|melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|scorecount[2]    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP|melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|scorecount[1]    ;
 ; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG1|env_count_reg[14] ;
 ; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG0|env_count_reg[0]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
@@ -750,14 +744,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Port Connectivity Checks: "PLL:PLL"                 ;
-+--------+--------+----------+------------------------+
-; Port   ; Type   ; Severity ; Details                ;
-+--------+--------+----------+------------------------+
-; areset ; Input  ; Info     ; Stuck at GND           ;
-; locked ; Output ; Info     ; Explicitly unconnected ;
-+--------+--------+----------+------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PLL:PLL"                                                                              ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; areset ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c0     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; locked ; Output ; Info     ; Explicitly unconnected                                                              ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -773,20 +768,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 1                           ;
 ;     plain             ; 37                          ;
 ; cycloneiii_io_obuf    ; 37                          ;
-; cycloneiii_lcell_comb ; 247                         ;
+; cycloneiii_lcell_comb ; 246                         ;
 ;     arith             ; 130                         ;
 ;         2 data inputs ; 94                          ;
 ;         3 data inputs ; 36                          ;
-;     normal            ; 117                         ;
+;     normal            ; 116                         ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 13                          ;
 ;         2 data inputs ; 16                          ;
 ;         3 data inputs ; 25                          ;
-;         4 data inputs ; 59                          ;
-; cycloneiii_pll        ; 1                           ;
+;         4 data inputs ; 58                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.60                        ;
-; Average LUT depth     ; 2.78                        ;
+; Average LUT depth     ; 2.79                        ;
 +-----------------------+-----------------------------+
 
 
@@ -805,7 +799,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun Mar 12 23:49:37 2017
+    Info: Processing started: Mon Mar 13 22:10:29 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off melodychime_top -c melodychime_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -824,6 +818,78 @@ Info (12021): Found 2 design units, including 1 entities, in source file rtl/mel
 Info (12021): Found 1 design units, including 1 entities, in source file ip/pll/pll.v
     Info (12023): Found entity 1: PLL File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 40
 Info (12127): Elaborating entity "TOP" for the top level hierarchy
+Warning (10863): bidir port "P62" at TOP.v(21) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 21
+Warning (10862): bidir port "P62" at TOP.v(21) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 21
+Warning (10863): bidir port "P61" at TOP.v(22) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 22
+Warning (10862): bidir port "P61" at TOP.v(22) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 22
+Warning (10863): bidir port "P60" at TOP.v(23) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 23
+Warning (10862): bidir port "P60" at TOP.v(23) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 23
+Warning (10863): bidir port "P59" at TOP.v(24) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 24
+Warning (10862): bidir port "P59" at TOP.v(24) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 24
+Warning (10863): bidir port "P58" at TOP.v(25) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 25
+Warning (10862): bidir port "P58" at TOP.v(25) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 25
+Warning (10863): bidir port "P57" at TOP.v(26) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 26
+Warning (10862): bidir port "P57" at TOP.v(26) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 26
+Warning (10863): bidir port "P56" at TOP.v(27) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 27
+Warning (10862): bidir port "P56" at TOP.v(27) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 27
+Warning (10863): bidir port "P55" at TOP.v(28) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 28
+Warning (10862): bidir port "P55" at TOP.v(28) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 28
+Warning (10863): bidir port "P52" at TOP.v(29) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 29
+Warning (10862): bidir port "P52" at TOP.v(29) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 29
+Warning (10863): bidir port "P50" at TOP.v(30) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 30
+Warning (10862): bidir port "P50" at TOP.v(30) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 30
+Warning (10863): bidir port "P48" at TOP.v(31) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 31
+Warning (10862): bidir port "P48" at TOP.v(31) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 31
+Warning (10863): bidir port "P47" at TOP.v(32) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 32
+Warning (10862): bidir port "P47" at TOP.v(32) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 32
+Warning (10863): bidir port "P46" at TOP.v(33) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 33
+Warning (10862): bidir port "P46" at TOP.v(33) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 33
+Warning (10863): bidir port "P45" at TOP.v(34) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 34
+Warning (10862): bidir port "P45" at TOP.v(34) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 34
+Warning (10863): bidir port "P44" at TOP.v(35) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 35
+Warning (10862): bidir port "P44" at TOP.v(35) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 35
+Warning (10863): bidir port "P43" at TOP.v(36) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 36
+Warning (10862): bidir port "P43" at TOP.v(36) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 36
+Warning (10863): bidir port "P41" at TOP.v(37) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 37
+Warning (10862): bidir port "P41" at TOP.v(37) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 37
+Warning (10863): bidir port "P39" at TOP.v(38) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 38
+Warning (10862): bidir port "P39" at TOP.v(38) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 38
+Warning (10863): bidir port "P38" at TOP.v(40) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 40
+Warning (10862): bidir port "P38" at TOP.v(40) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 40
+Warning (10863): bidir port "P124" at TOP.v(41) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 41
+Warning (10862): bidir port "P124" at TOP.v(41) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 41
+Warning (10863): bidir port "P127" at TOP.v(42) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 42
+Warning (10862): bidir port "P127" at TOP.v(42) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 42
+Warning (10863): bidir port "P130" at TOP.v(43) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 43
+Warning (10862): bidir port "P130" at TOP.v(43) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 43
+Warning (10863): bidir port "P131" at TOP.v(44) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 44
+Warning (10862): bidir port "P131" at TOP.v(44) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 44
+Warning (10863): bidir port "P132" at TOP.v(45) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 45
+Warning (10862): bidir port "P132" at TOP.v(45) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 45
+Warning (10863): bidir port "P134" at TOP.v(46) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 46
+Warning (10862): bidir port "P134" at TOP.v(46) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 46
+Warning (10863): bidir port "P135" at TOP.v(47) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 47
+Warning (10862): bidir port "P135" at TOP.v(47) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 47
+Warning (10863): bidir port "P140" at TOP.v(48) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 48
+Warning (10862): bidir port "P140" at TOP.v(48) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 48
+Warning (10863): bidir port "P141" at TOP.v(50) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 50
+Warning (10862): bidir port "P141" at TOP.v(50) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 50
+Warning (10863): bidir port "P6" at TOP.v(51) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 51
+Warning (10862): bidir port "P6" at TOP.v(51) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 51
+Warning (10863): bidir port "P7" at TOP.v(52) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 52
+Warning (10862): bidir port "P7" at TOP.v(52) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 52
+Warning (10863): bidir port "P8" at TOP.v(53) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 53
+Warning (10862): bidir port "P8" at TOP.v(53) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 53
+Warning (10863): bidir port "P10" at TOP.v(54) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 54
+Warning (10862): bidir port "P10" at TOP.v(54) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 54
+Warning (10863): bidir port "P11" at TOP.v(55) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 55
+Warning (10862): bidir port "P11" at TOP.v(55) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 55
+Warning (10863): bidir port "P12" at TOP.v(56) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 56
+Warning (10862): bidir port "P12" at TOP.v(56) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 56
+Warning (10863): bidir port "P13" at TOP.v(57) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 57
+Warning (10862): bidir port "P13" at TOP.v(57) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 57
+Warning (10862): bidir port "P14" at TOP.v(58) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 58
+Warning (10862): bidir port "P17" at TOP.v(60) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
 Info (12128): Elaborating entity "PLL" for hierarchy "PLL:PLL" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 69
 Info (12128): Elaborating entity "altpll" for hierarchy "PLL:PLL|altpll:altpll_component" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 104
 Info (12130): Elaborated megafunction instantiation "PLL:PLL|altpll:altpll_component" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 104
@@ -889,6 +955,10 @@ Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:PLL|altpll:altp
 Info (12128): Elaborating entity "melodychime_top" for hierarchy "melodychime_top:u_melodychime_top" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 93
 Info (12128): Elaborating entity "melodychime_seq" for hierarchy "melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd Line: 183
 Info (12128): Elaborating entity "melodychime_sg" for hierarchy "melodychime_top:u_melodychime_top|melodychime_sg:U_SG0" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd Line: 207
+Info (10035): Verilog HDL or VHDL information at melodychime_sg.vhd(57): object "env_cnext_sig" declared but not used File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_sg.vhd Line: 57
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following PLL node(s):
+        Warning (14320): Synthesized away node "PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0]" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/db/pll_altpll.v Line: 93
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "P14" and its non-tri-state driver. File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 58
     Warning (13035): Inserted always-enabled tri-state buffer between "P17" and its non-tri-state driver. File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
@@ -933,17 +1003,16 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "P17~synth" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 308 device resources after synthesis - the final resource count might be different
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 306 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 3 output pins
     Info (21060): Implemented 37 bidirectional pins
-    Info (21061): Implemented 265 logic cells
-    Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
-    Info: Peak virtual memory: 698 megabytes
-    Info: Processing ended: Sun Mar 12 23:50:14 2017
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:00:55
+    Info (21061): Implemented 264 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 119 warnings
+    Info: Peak virtual memory: 684 megabytes
+    Info: Processing ended: Mon Mar 13 22:10:54 2017
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:50
 
 

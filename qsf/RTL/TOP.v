@@ -83,7 +83,7 @@ module TOP(
         , .RESET_LEVEL  ( 1'b0          ) //Positive logic reset
     ) u_melodychime_top(
           .reset            ( XAR               )
-        , .clk              ( CK50M             ) //system clock
+        , .clk              ( CK48M_i             ) //system clock
         , .test_score_led   ( test_score_led    )
         , .start            ( start             ) //play start('1':start)
         , .timing_1ms_out   ( timing_1ms        ) //1ms timig pulse out
