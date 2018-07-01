@@ -1,6 +1,6 @@
 Analysis & Synthesis report for melodychime_top
-Mon Mar 13 22:10:54 2017
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Sun Jul 01 19:29:21 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -14,28 +14,31 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: PLL:PLL|altpll:altpll_component
- 12. Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top
- 13. Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ
- 14. Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_sg:U_SG0
- 15. Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_sg:U_SG1
- 16. altpll Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "melodychime_top:u_melodychime_top|melodychime_sg:U_SG1"
- 18. Port Connectivity Checks: "melodychime_top:u_melodychime_top|melodychime_sg:U_SG0"
- 19. Port Connectivity Checks: "melodychime_top:u_melodychime_top"
- 20. Port Connectivity Checks: "PLL:PLL"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: PLL:PLL|altpll:altpll_component
+ 13. Parameter Settings for User Entity Instance: MELODY_CHIME:MELODY_CHIME
+ 14. Parameter Settings for User Entity Instance: MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SEQ:MELODY_CHIME_SEQ
+ 15. Parameter Settings for User Entity Instance: MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[0].MELODY_CHIME_SG
+ 16. Parameter Settings for User Entity Instance: MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[1].MELODY_CHIME_SG
+ 17. Parameter Settings for User Entity Instance: MELODY_CHIME:MELODY_CHIME|DELTA_SIGMA_1BIT_DAC:DELTA_SIGMA_1BIT_DAC
+ 18. altpll Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[1].MELODY_CHIME_SG"
+ 20. Port Connectivity Checks: "MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[0].MELODY_CHIME_SG"
+ 21. Port Connectivity Checks: "MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SEQ:MELODY_CHIME_SEQ"
+ 22. Port Connectivity Checks: "MELODY_CHIME:MELODY_CHIME"
+ 23. Port Connectivity Checks: "PLL:PLL"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -43,27 +46,26 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 13 22:10:54 2017       ;
-; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Sun Jul 01 19:29:21 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; melodychime_top                             ;
 ; Top-level Entity Name              ; TOP                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 254                                         ;
-;     Total combinational functions  ; 243                                         ;
-;     Dedicated logic registers      ; 125                                         ;
-; Total registers                    ; 125                                         ;
+; Total logic elements               ; 235                                         ;
+;     Total combinational functions  ; 225                                         ;
+;     Dedicated logic registers      ; 143                                         ;
+; Total registers                    ; 143                                         ;
 ; Total pins                         ; 42                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -89,7 +91,7 @@ agreement for further details.
 ; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
 ; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
 ; Preserve fewer node names                                                  ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
 ; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                   ; Auto               ; Auto               ;
@@ -142,7 +144,7 @@ agreement for further details.
 ; Report Connectivity Checks                                                 ; On                 ; On                 ;
 ; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
 ; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
 ; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
 ; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
 ; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
@@ -177,23 +179,24 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; RTL/TOP.v                        ; yes             ; User Verilog HDL File        ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v               ;         ;
-; RTL/melodychime_top.vhd          ; yes             ; User VHDL File               ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd ;         ;
-; RTL/melodychime_sg.vhd           ; yes             ; User VHDL File               ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_sg.vhd  ;         ;
-; RTL/melodychime_seq.vhd          ; yes             ; User VHDL File               ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_seq.vhd ;         ;
-; IP/PLL/PLL.v                     ; yes             ; User Wizard-Generated File   ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v            ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; d:/altera/16.1/quartus/libraries/megafunctions/altpll.tdf                ;         ;
-; aglobal161.inc                   ; yes             ; Megafunction                 ; d:/altera/16.1/quartus/libraries/megafunctions/aglobal161.inc            ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/altera/16.1/quartus/libraries/megafunctions/stratix_pll.inc           ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; d:/altera/16.1/quartus/libraries/megafunctions/stratixii_pll.inc         ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; d:/altera/16.1/quartus/libraries/megafunctions/cycloneii_pll.inc         ;         ;
-; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction  ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/db/pll_altpll.v         ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; RTL/TOP.v                        ; yes             ; User Verilog HDL File        ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v                  ;         ;
+; IP/PLL/PLL.v                     ; yes             ; User Wizard-Generated File   ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v               ;         ;
+; ./RTL/MELODY_CHIME_SG.v          ; yes             ; Auto-Found Verilog HDL File  ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SG.v      ;         ;
+; ./RTL/MELODY_CHIME_SEQ.v         ; yes             ; Auto-Found Verilog HDL File  ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v     ;         ;
+; ./RTL/DELTA_SIGMA_1BIT_DAC.v     ; yes             ; Auto-Found Verilog HDL File  ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/DELTA_SIGMA_1BIT_DAC.v ;         ;
+; ./RTL/MELODY_CHIME.v             ; yes             ; Auto-Found Verilog HDL File  ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v         ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf           ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc       ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_pll.inc      ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratixii_pll.inc    ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/cycloneii_pll.inc    ;         ;
+; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction  ; D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/db/pll_altpll.v            ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -201,20 +204,20 @@ agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 254           ;
+; Estimated Total logic elements              ; 235           ;
 ;                                             ;               ;
-; Total combinational functions               ; 243           ;
+; Total combinational functions               ; 225           ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 58            ;
-;     -- 3 input functions                    ; 61            ;
+;     -- 4 input functions                    ; 55            ;
+;     -- 3 input functions                    ; 46            ;
 ;     -- <=2 input functions                  ; 124           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 113           ;
-;     -- arithmetic mode                      ; 130           ;
+;     -- normal mode                          ; 94            ;
+;     -- arithmetic mode                      ; 131           ;
 ;                                             ;               ;
-; Total registers                             ; 125           ;
-;     -- Dedicated logic registers            ; 125           ;
+; Total registers                             ; 143           ;
+;     -- Dedicated logic registers            ; 143           ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 42            ;
@@ -222,23 +225,24 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; CK48M_i~input ;
-; Maximum fan-out                             ; 125           ;
-; Total fan-out                               ; 1150          ;
-; Average fan-out                             ; 2.35          ;
+; Maximum fan-out                             ; 143           ;
+; Total fan-out                               ; 1154          ;
+; Average fan-out                             ; 2.36          ;
 +---------------------------------------------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                         ;
-+----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                          ; Entity Name     ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------+-----------------+--------------+
-; |TOP                                   ; 243 (1)             ; 125 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 42   ; 0            ; 0          ; |TOP                                                         ; TOP             ; work         ;
-;    |melodychime_top:u_melodychime_top| ; 242 (48)            ; 125 (33)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top                       ; melodychime_top ; work         ;
-;       |melodychime_seq:U_SEQ|          ; 62 (62)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ ; melodychime_seq ; work         ;
-;       |melodychime_sg:U_SG0|           ; 66 (66)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG0  ; melodychime_sg  ; work         ;
-;       |melodychime_sg:U_SG1|           ; 66 (66)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG1  ; melodychime_sg  ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------+-----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
++----------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node                                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                   ; Entity Name          ; Library Name ;
++----------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+----------------------+--------------+
+; |TOP                                                           ; 225 (1)             ; 143 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 42   ; 0            ; 0          ; |TOP                                                                                  ; TOP                  ; work         ;
+;    |MELODY_CHIME:MELODY_CHIME|                                 ; 224 (37)            ; 143 (22)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|MELODY_CHIME:MELODY_CHIME                                                        ; MELODY_CHIME         ; work         ;
+;       |DELTA_SIGMA_1BIT_DAC:DELTA_SIGMA_1BIT_DAC|              ; 13 (13)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|MELODY_CHIME:MELODY_CHIME|DELTA_SIGMA_1BIT_DAC:DELTA_SIGMA_1BIT_DAC              ; DELTA_SIGMA_1BIT_DAC ; work         ;
+;       |MELODY_CHIME_SEQ:MELODY_CHIME_SEQ|                      ; 60 (60)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SEQ:MELODY_CHIME_SEQ                      ; MELODY_CHIME_SEQ     ; work         ;
+;       |MELODY_CHIME_SG:gen_MELODY_CHIME_SG[0].MELODY_CHIME_SG| ; 57 (57)             ; 41 (41)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[0].MELODY_CHIME_SG ; MELODY_CHIME_SG      ; work         ;
+;       |MELODY_CHIME_SG:gen_MELODY_CHIME_SG[1].MELODY_CHIME_SG| ; 57 (57)             ; 41 (41)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |TOP|MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[1].MELODY_CHIME_SG ; MELODY_CHIME_SG      ; work         ;
++----------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -247,8 +251,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
-; Altera ; ALTPLL       ; 16.1    ; N/A          ; N/A          ; |TOP|PLL:PLL    ; IP/PLL/PLL.v    ;
+; Altera ; ALTPLL       ; 17.1    ; N/A          ; N/A          ; |TOP|PLL:PLL    ; IP/PLL/PLL.v    ;
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                    ;
++----------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                ; Reason for Removal                     ;
++----------------------------------------------------------------------------------------------+----------------------------------------+
+; MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[1].MELODY_CHIME_SG|DIV_LENs[7] ; Stuck at GND due to stuck port data_in ;
+; MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[0].MELODY_CHIME_SG|DIV_LENs[7] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2                                                        ;                                        ;
++----------------------------------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -256,25 +271,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 125   ;
+; Total registers                              ; 143   ;
 ; Number of registers using Synchronous Clear  ; 4     ;
-; Number of registers using Synchronous Load   ; 47    ;
+; Number of registers using Synchronous Load   ; 65    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 87    ;
+; Number of registers using Clock Enable       ; 85    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP|melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ|scorecount[1]    ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG1|env_count_reg[14] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP|melodychime_top:u_melodychime_top|melodychime_sg:U_SG0|env_count_reg[0]  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP|MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SEQ:MELODY_CHIME_SEQ|SCORE_CTRs[0]                    ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP|MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[1].MELODY_CHIME_SG|ENV_CTRs[3] ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TOP|MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[0].MELODY_CHIME_SG|ENV_CTRs[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------+
@@ -651,50 +666,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; clock_edge     ; 1     ; Unsigned Binary                                       ;
-; reset_level    ; 0     ; Unsigned Binary                                       ;
-+----------------+-------+-------------------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MELODY_CHIME:MELODY_CHIME ;
++----------------+----------+--------------------------------------------+
+; Parameter Name ; Value    ; Type                                       ;
++----------------+----------+--------------------------------------------+
+; C_SYS_CK_FREQ  ; 48000000 ; Signed Integer                             ;
++----------------+----------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; clock_edge     ; '1'   ; Enumerated                                                                  ;
-; reset_level    ; '0'   ; Enumerated                                                                  ;
-; tempo_tc       ; 357   ; Signed Integer                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SEQ:MELODY_CHIME_SEQ ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; C_TEMPO_TC     ; 357   ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_sg:U_SG0 ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; clock_edge     ; '1'   ; Enumerated                                                                 ;
-; reset_level    ; '0'   ; Enumerated                                                                 ;
-; envelope_tc    ; 28000 ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[0].MELODY_CHIME_SG ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; C_ENVELOPE_TC  ; 28000 ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: melodychime_top:u_melodychime_top|melodychime_sg:U_SG1 ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; clock_edge     ; '1'   ; Enumerated                                                                 ;
-; reset_level    ; '0'   ; Enumerated                                                                 ;
-; envelope_tc    ; 28000 ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[1].MELODY_CHIME_SG ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; C_ENVELOPE_TC  ; 28000 ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MELODY_CHIME:MELODY_CHIME|DELTA_SIGMA_1BIT_DAC:DELTA_SIGMA_1BIT_DAC ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; C_DAT_W        ; 10    ; Signed Integer                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -715,33 +733,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+---------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "melodychime_top:u_melodychime_top|melodychime_sg:U_SG1"                                       ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; wave_out[6..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[1].MELODY_CHIME_SG"            ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; DIV_LENs_i[7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; WAVEs_o[6..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[0].MELODY_CHIME_SG"            ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; DIV_LENs_i[7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; WAVEs_o[6..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "melodychime_top:u_melodychime_top|melodychime_sg:U_SG0"                                       ;
+; Port Connectivity Checks: "MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SEQ:MELODY_CHIME_SEQ"                                  ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port           ; Type   ; Severity ; Details                                                                             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
-; wave_out[6..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; SLOT_divs_o[7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "melodychime_top:u_melodychime_top"                                                                  ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                 ; Type   ; Severity ; Details                                                                             ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; reset                ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; test_score_led[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; aud_r_out            ; Output ; Info     ; Explicitly unconnected                                                              ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MELODY_CHIME:MELODY_CHIME"                                                                           ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; XARST_i               ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; AUDIO_R_o             ; Output ; Info     ; Explicitly unconnected                                                              ;
+; DB_SCORE_LEDs_o[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -761,26 +790,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 42                          ;
-; cycloneiii_ff         ; 125                         ;
-;     ENA               ; 37                          ;
+; cycloneiii_ff         ; 143                         ;
+;     ENA               ; 35                          ;
 ;     ENA SCLR          ; 4                           ;
 ;     ENA SLD           ; 46                          ;
-;     SLD               ; 1                           ;
-;     plain             ; 37                          ;
+;     SLD               ; 19                          ;
+;     plain             ; 39                          ;
 ; cycloneiii_io_obuf    ; 37                          ;
-; cycloneiii_lcell_comb ; 246                         ;
-;     arith             ; 130                         ;
+; cycloneiii_lcell_comb ; 228                         ;
+;     arith             ; 131                         ;
 ;         2 data inputs ; 94                          ;
-;         3 data inputs ; 36                          ;
-;     normal            ; 116                         ;
+;         3 data inputs ; 37                          ;
+;     normal            ; 97                          ;
 ;         0 data inputs ; 4                           ;
-;         1 data inputs ; 13                          ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 25                          ;
-;         4 data inputs ; 58                          ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 55                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.60                        ;
-; Average LUT depth     ; 2.79                        ;
+; Max LUT depth         ; 3.20                        ;
+; Average LUT depth     ; 2.06                        ;
 +-----------------------+-----------------------------+
 
 
@@ -789,7 +818,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -798,25 +827,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Mon Mar 13 22:10:29 2017
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sun Jul 01 19:28:55 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off melodychime_top -c melodychime_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Warning (12019): Can't analyze file -- file FPGA.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/top.v
     Info (12023): Found entity 1: TOP File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 13
-Info (12021): Found 2 design units, including 1 entities, in source file rtl/melodychime_top.vhd
-    Info (12022): Found design unit 1: melodychime_top-RTL File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd Line: 47
-    Info (12023): Found entity 1: melodychime_top File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file rtl/melodychime_sg.vhd
-    Info (12022): Found design unit 1: melodychime_sg-RTL File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_sg.vhd Line: 48
-    Info (12023): Found entity 1: melodychime_sg File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_sg.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file rtl/melodychime_seq.vhd
-    Info (12022): Found design unit 1: melodychime_seq-RTL File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_seq.vhd Line: 51
-    Info (12023): Found entity 1: melodychime_seq File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_seq.vhd Line: 27
+Info (12021): Found 5 design units, including 5 entities, in source file rtl/include.v
+    Info (12023): Found entity 1: MELODY_CHIME_SG File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SG.v Line: 24
+    Info (12023): Found entity 2: MELODY_CHIME_SEQ File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 22
+    Info (12023): Found entity 3: DELTA_SIGMA_1BIT_DAC File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/DELTA_SIGMA_1BIT_DAC.v Line: 15
+    Info (12023): Found entity 4: tbDELTA_SIGMA_1BIT_DAC File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/DELTA_SIGMA_1BIT_DAC.v Line: 58
+    Info (12023): Found entity 5: MELODY_CHIME File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file ip/pll/pll.v
-    Info (12023): Found entity 1: PLL File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 40
+    Info (12023): Found entity 1: PLL File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 39
 Info (12127): Elaborating entity "TOP" for the top level hierarchy
 Warning (10863): bidir port "P62" at TOP.v(21) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 21
 Warning (10862): bidir port "P62" at TOP.v(21) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 21
@@ -891,9 +916,9 @@ Warning (10862): bidir port "P13" at TOP.v(57) has no fan-out File: D:/work/Veri
 Warning (10862): bidir port "P14" at TOP.v(58) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 58
 Warning (10862): bidir port "P17" at TOP.v(60) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
 Info (12128): Elaborating entity "PLL" for hierarchy "PLL:PLL" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 69
-Info (12128): Elaborating entity "altpll" for hierarchy "PLL:PLL|altpll:altpll_component" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 104
-Info (12130): Elaborated megafunction instantiation "PLL:PLL|altpll:altpll_component" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 104
-Info (12133): Instantiated megafunction "PLL:PLL|altpll:altpll_component" with the following parameter: File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 104
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL:PLL|altpll:altpll_component" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 103
+Info (12130): Elaborated megafunction instantiation "PLL:PLL|altpll:altpll_component" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 103
+Info (12133): Instantiated megafunction "PLL:PLL|altpll:altpll_component" with the following parameter: File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 103
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "24"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -950,15 +975,108 @@ Info (12133): Instantiated megafunction "PLL:PLL|altpll:altpll_component" with t
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: PLL_altpll File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/db/pll_altpll.v Line: 31
-Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated" File: d:/altera/16.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "melodychime_top" for hierarchy "melodychime_top:u_melodychime_top" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 93
-Info (12128): Elaborating entity "melodychime_seq" for hierarchy "melodychime_top:u_melodychime_top|melodychime_seq:U_SEQ" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd Line: 183
-Info (12128): Elaborating entity "melodychime_sg" for hierarchy "melodychime_top:u_melodychime_top|melodychime_sg:U_SG0" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_top.vhd Line: 207
-Info (10035): Verilog HDL or VHDL information at melodychime_sg.vhd(57): object "env_cnext_sig" declared but not used File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/melodychime_sg.vhd Line: 57
+    Info (12023): Found entity 1: PLL_altpll File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/db/pll_altpll.v Line: 30
+Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "MELODY_CHIME" for hierarchy "MELODY_CHIME:MELODY_CHIME" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 92
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME.v(80): truncated unsized constant literal with size 32 to size 9 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 80
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME.v(81): truncated unsized constant literal with size 32 to size 7 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 81
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME.v(89): truncated value with size 32 to match size of target (9) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 89
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME.v(91): truncated unsized constant literal with size 32 to size 7 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 91
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME.v(93): truncated value with size 32 to match size of target (7) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 93
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME.v(95): truncated value with size 32 to match size of target (9) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 95
+Warning (10040): Verilog HDL or VHDL arithmetic warning at MELODY_CHIME.v(166): loss of carry in addition or borrow in subtraction File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 166
+Info (12128): Elaborating entity "MELODY_CHIME_SEQ" for hierarchy "MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SEQ:MELODY_CHIME_SEQ" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 137
+Info (10035): Verilog HDL or VHDL information at MELODY_CHIME_SEQ.v(85): object "SLOT_DIVs" declared but not used File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 85
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SEQ.v(146): truncated unsized constant literal with size 32 to size 9 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 146
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SEQ.v(147): truncated unsized constant literal with size 32 to size 1 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 147
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(152): truncated value with size 32 to match size of target (9) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 152
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(154): truncated value with size 32 to match size of target (9) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 154
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SEQ.v(168): truncated unsized constant literal with size 32 to size 1 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 168
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SEQ.v(169): truncated unsized constant literal with size 32 to size 4 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 169
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SEQ.v(172): truncated unsized constant literal with size 32 to size 1 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 172
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SEQ.v(179): truncated unsized constant literal with size 32 to size 4 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 179
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(183): truncated value with size 32 to match size of target (4) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 183
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SEQ.v(188): truncated unsized constant literal with size 32 to size 1 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 188
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SEQ.v(190): truncated unsized constant literal with size 32 to size 1 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 190
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(192): truncated value with size 32 to match size of target (1) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 192
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SEQ.v(199): truncated unsized constant literal with size 32 to size 6 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 199
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(97): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 97
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(98): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 98
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(99): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 99
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(100): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 100
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(101): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 101
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(102): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 102
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(103): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 103
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(104): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 104
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(105): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 105
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(106): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 106
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(107): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 107
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(108): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 108
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(109): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 109
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(110): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 110
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(111): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 111
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(112): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 112
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(114): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 114
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(115): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 115
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(116): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 116
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(117): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 117
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(118): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 118
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(119): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 119
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(120): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 120
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(121): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 121
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(122): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 122
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(123): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 123
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(124): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 124
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(125): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 125
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(126): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 126
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(127): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 127
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(128): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 128
+Warning (10271): Verilog HDL Case Statement warning at MELODY_CHIME_SEQ.v(129): size of case item expression (32) exceeds the size of the case expression (5) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 129
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SEQ.v(209): truncated unsized constant literal with size 32 to size 1 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 209
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(223): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 223
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(224): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 224
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(225): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 225
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(226): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 226
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(227): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 227
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(228): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 228
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(229): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 229
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(230): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 230
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(231): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 231
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(232): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 232
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(233): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 233
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(234): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 234
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(235): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 235
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(236): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 236
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(237): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 237
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(238): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 238
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(239): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 239
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(240): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 240
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(241): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 241
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(242): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 242
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(243): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 243
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(244): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 244
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(245): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 245
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(246): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 246
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(247): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 247
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(248): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 248
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(249): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 249
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(250): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 250
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(251): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 251
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(252): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 252
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(253): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 253
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SEQ.v(254): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 254
+Info (12128): Elaborating entity "MELODY_CHIME_SG" for hierarchy "MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SG:gen_MELODY_CHIME_SG[0].MELODY_CHIME_SG" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 159
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SG.v(71): truncated value with size 32 to match size of target (8) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SG.v Line: 71
+Warning (10040): Verilog HDL or VHDL arithmetic warning at MELODY_CHIME_SG.v(80): loss of carry in addition or borrow in subtraction File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SG.v Line: 80
+Warning (10230): Verilog HDL assignment warning at MELODY_CHIME_SG.v(90): truncated value with size 32 to match size of target (15) File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SG.v Line: 90
+Info (10662): Verilog HDL Assignment information at MELODY_CHIME_SG.v(105): truncated unsized constant literal with size 32 to size 16 with no loss of information File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SG.v Line: 105
+Info (12128): Elaborating entity "DELTA_SIGMA_1BIT_DAC" for hierarchy "MELODY_CHIME:MELODY_CHIME|DELTA_SIGMA_1BIT_DAC:DELTA_SIGMA_1BIT_DAC" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME.v Line: 180
+Warning (10040): Verilog HDL or VHDL arithmetic warning at DELTA_SIGMA_1BIT_DAC.v(40): loss of carry in addition or borrow in subtraction File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/DELTA_SIGMA_1BIT_DAC.v Line: 40
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following PLL node(s):
-        Warning (14320): Synthesized away node "PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0]" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/db/pll_altpll.v Line: 93
+        Warning (14320): Synthesized away node "PLL:PLL|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0]" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/db/pll_altpll.v Line: 92
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276013): RAM logic "MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SEQ:MELODY_CHIME_SEQ|Ram0" is uninferred because MIF is not supported for the selected family File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 222
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "P14" and its non-tri-state driver. File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 58
     Warning (13035): Inserted always-enabled tri-state buffer between "P17" and its non-tri-state driver. File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
@@ -1004,15 +1122,15 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 306 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 286 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 3 output pins
     Info (21060): Implemented 37 bidirectional pins
-    Info (21061): Implemented 264 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 119 warnings
-    Info: Peak virtual memory: 684 megabytes
-    Info: Processing ended: Mon Mar 13 22:10:54 2017
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:50
+    Info (21061): Implemented 244 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 194 warnings
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Sun Jul 01 19:29:22 2018
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:57
 
 

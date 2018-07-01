@@ -78,18 +78,17 @@ module TOP(
     wire            tempo_led       ;
     wire            aud_l           ; //1bitDSM-DAC
     assign start = ~ XPSW_i ;
-    melodychime_top # (
-          .CLOCK_EDGE   ( 1'b1          ) //Rise edge drive clock
-        , .RESET_LEVEL  ( 1'b0          ) //Positive logic reset
-    ) u_melodychime_top(
-          .reset            ( XAR               )
-        , .clk              ( CK48M_i             ) //system clock
-        , .test_score_led   ( test_score_led    )
-        , .start            ( start             ) //play start('1':start)
-        , .timing_1ms_out   ( timing_1ms        ) //1ms timig pulse out
-        , .tempo_led        ( tempo_led         )
-        , .aud_l_out        ( aud_l             ) //1bitDSM-DAC
-        , .aud_r_out        ()                    //same aud_l_out
+    MELODY_CHIME
+    MELODY_CHIME
+    (
+          .CK_i             ( CK48M_i             ) //system clock
+        , .XARST_i          ( XAR               )
+        , .START_i          ( start             ) //play start('1':start)
+        , .TIMING_1MS_o     ( timing_1ms        ) //1ms timig pulse out
+        , .AUDIO_L_o        ( aud_l             ) //1bitDSM-DAC
+        , .AUDIO_R_o        ()                    //same aud_l_out
+        , .TEMPO_LED_o      ( tempo_led         )
+        , .DB_SCORE_LEDs_o  ( test_score_led    )
     ) ; //melodychime_top
     assign XLED_R_o = ~ tempo_led ;
     assign XLED_G_o = ~ test_score_led[0]   ;

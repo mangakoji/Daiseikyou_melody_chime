@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon Mar 13 22:10:54 2017
-Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Sun Jul 01 19:29:21 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : melodychime_top
 Top-level Entity Name : TOP
 Family : MAX 10
-Total logic elements : 254
-    Total combinational functions : 243
-    Dedicated logic registers : 125
-Total registers : 125
+Total logic elements : 235
+    Total combinational functions : 225
+    Dedicated logic registers : 143
+Total registers : 143
 Total pins : 42
 Total virtual pins : 0
 Total memory bits : 0
