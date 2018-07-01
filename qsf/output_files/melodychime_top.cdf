@@ -1,10 +1,10 @@
-/* Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition */
+/* Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C16F484) Path("C:/PROJECT/cq_viola/cqext_melodychime/output_files/") File("melodychime_top.sof") MfrSpec(OpMask(1));
+		Device PartName(10M08SAE144) Path("D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/output_files/") File("melodychime_top.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

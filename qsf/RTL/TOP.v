@@ -93,6 +93,6 @@ module TOP(
     assign XLED_R_o = ~ tempo_led ;
     assign XLED_G_o = ~ test_score_led[0]   ;
     assign XLED_B_o = ~ timing_1ms ;
-    assign P17 = aud_l ;
-    assign P14 = ~ aud_l ;
+    assign P38 = aud_l ;
+    assign P39 = ~ aud_l ;
 endmodule //TOP

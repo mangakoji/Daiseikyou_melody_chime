@@ -1,5 +1,5 @@
 Analysis & Synthesis report for melodychime_top
-Sun Jul 01 19:29:21 2018
+Sun Jul 01 22:47:16 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -57,7 +57,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jul 01 19:29:21 2018       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jul 01 22:47:16 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; melodychime_top                             ;
 ; Top-level Entity Name              ; TOP                                         ;
@@ -818,7 +818,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -828,7 +828,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Jul 01 19:28:55 2018
+    Info: Processing started: Sun Jul 01 22:46:44 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off melodychime_top -c melodychime_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -877,9 +877,7 @@ Warning (10863): bidir port "P43" at TOP.v(36) has no fan-in File: D:/work/Veril
 Warning (10862): bidir port "P43" at TOP.v(36) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 36
 Warning (10863): bidir port "P41" at TOP.v(37) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 37
 Warning (10862): bidir port "P41" at TOP.v(37) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 37
-Warning (10863): bidir port "P39" at TOP.v(38) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 38
 Warning (10862): bidir port "P39" at TOP.v(38) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 38
-Warning (10863): bidir port "P38" at TOP.v(40) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 40
 Warning (10862): bidir port "P38" at TOP.v(40) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 40
 Warning (10863): bidir port "P124" at TOP.v(41) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 41
 Warning (10862): bidir port "P124" at TOP.v(41) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 41
@@ -913,7 +911,9 @@ Warning (10863): bidir port "P12" at TOP.v(56) has no fan-in File: D:/work/Veril
 Warning (10862): bidir port "P12" at TOP.v(56) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 56
 Warning (10863): bidir port "P13" at TOP.v(57) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 57
 Warning (10862): bidir port "P13" at TOP.v(57) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 57
+Warning (10863): bidir port "P14" at TOP.v(58) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 58
 Warning (10862): bidir port "P14" at TOP.v(58) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 58
+Warning (10863): bidir port "P17" at TOP.v(60) has no fan-in File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
 Warning (10862): bidir port "P17" at TOP.v(60) has no fan-out File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
 Info (12128): Elaborating entity "PLL" for hierarchy "PLL:PLL" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 69
 Info (12128): Elaborating entity "altpll" for hierarchy "PLL:PLL|altpll:altpll_component" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/IP/PLL/PLL.v Line: 103
@@ -1078,8 +1078,8 @@ Warning (14284): Synthesized away the following node(s):
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276013): RAM logic "MELODY_CHIME:MELODY_CHIME|MELODY_CHIME_SEQ:MELODY_CHIME_SEQ|Ram0" is uninferred because MIF is not supported for the selected family File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/MELODY_CHIME_SEQ.v Line: 222
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "P14" and its non-tri-state driver. File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 58
-    Warning (13035): Inserted always-enabled tri-state buffer between "P17" and its non-tri-state driver. File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
+    Warning (13035): Inserted always-enabled tri-state buffer between "P39" and its non-tri-state driver. File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 38
+    Warning (13035): Inserted always-enabled tri-state buffer between "P38" and its non-tri-state driver. File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 40
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "P62" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 21
     Warning (13040): bidirectional pin "P61" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 22
@@ -1098,8 +1098,6 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "P44" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 35
     Warning (13040): bidirectional pin "P43" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 36
     Warning (13040): bidirectional pin "P41" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 37
-    Warning (13040): bidirectional pin "P39" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 38
-    Warning (13040): bidirectional pin "P38" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 40
     Warning (13040): bidirectional pin "P124" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 41
     Warning (13040): bidirectional pin "P127" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 42
     Warning (13040): bidirectional pin "P130" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 43
@@ -1116,9 +1114,11 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "P11" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 55
     Warning (13040): bidirectional pin "P12" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 56
     Warning (13040): bidirectional pin "P13" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 57
+    Warning (13040): bidirectional pin "P14" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 58
+    Warning (13040): bidirectional pin "P17" has no driver File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
 Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "P14~synth" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 58
-    Warning (13010): Node "P17~synth" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 60
+    Warning (13010): Node "P39~synth" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 38
+    Warning (13010): Node "P38~synth" File: D:/work/Verilog/Daiseikyou/CQEXT_melodychime/qsf/RTL/TOP.v Line: 40
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1128,9 +1128,9 @@ Info (21057): Implemented 286 device resources after synthesis - the final resou
     Info (21060): Implemented 37 bidirectional pins
     Info (21061): Implemented 244 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 194 warnings
-    Info: Peak virtual memory: 4771 megabytes
-    Info: Processing ended: Sun Jul 01 19:29:22 2018
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:57
+    Info: Peak virtual memory: 4783 megabytes
+    Info: Processing ended: Sun Jul 01 22:47:16 2018
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:58
 
 
