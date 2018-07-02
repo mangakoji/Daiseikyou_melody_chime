@@ -5,8 +5,10 @@
 //     DATE   : 2012/08/17 -> 2012/08/28
 //            : 2012/08/28 (FIXED)
 //
-//     UPDATE : 2017/11/01we :mod Verilog
-//              2015/03/14
+//  mod UPDATE : 
+//      2018-07-01u :WIP Verilog ver @mangakoji GitHub
+//      2017/11/01we :mod Verilog
+//      2015/03/14
 // ===================================================================
 // *******************************************************************
 //   Copyright (C) 2012,2015 J-7SYSTEM Works.  All rights Reserved.
@@ -117,7 +119,7 @@ module MELODY_CHIME
 
 
     // シーケンサインスタンス 
-    wire[ 6:0]  SLOT_divs       ;
+    wire[ 7:0]  SLOT_divs       ;
     wire        SLOT_note       ;
     wire[1:0]   SLOTs_WT_REQ    ;
     MELODY_CHIME_SEQ 
@@ -174,9 +176,77 @@ module MELODY_CHIME
     (
           .CK       ( CK_i      )
         , .XARST_i  ( XARST_i   )
-        , .DAT_i    ( WAVEs_add )
+        , .DAT_i    ( {~WAVEs_add[9] , WAVEs_add[8:0]} )//2's->strofs
         , .QQ_o     ( AUDIO_L_o )
         , .XQQ_o    ( AUDIO_R_o )
     ) ;
 endmodule
 // MELODY_CHIME
+
+
+
+`timescale 1ns/1ns
+module TB_MELODY_CHIME
+#(
+    parameter C_C = 10.0
+)(
+) ;
+    reg CK ;
+    reg XAR ;
+    initial
+    begin
+        CK = 1 ;
+        forever
+            #(C_C * 0.5) CK <= ~CK ;
+    end
+    initial
+    begin
+       XAR = 1 ;
+        @(posedge CK) ;
+        @(posedge CK); 
+        #(C_C * 0.5) XAR <= 0 ;
+        @(posedge CK) ;
+        repeat(1)
+            @(posedge CK) ;
+        #(C_C * 0.1) XAR <= 1 ;
+    end
+
+    reg           START             ;
+    wire          TIMING_1MS_o      ;
+    wire          AUDIO_L_o         ;
+    wire          AUDIO_R_o         ;
+    wire          TEMPO_LED_o       ;  
+    wire   [3:0]  DB_SCORE_LEDs_o   ;
+    MELODY_CHIME 
+    #(
+        .C_SYS_CK_FREQ  ( 1_000_000 )
+    ) MELODY_CHIME
+    (
+          .CK_i            ( CK             )
+        , .XARST_i         ( XAR            )
+        , .START_i         ( START          )
+        , .TIMING_1MS_o    ( TIMING_1MS_o    )
+        , .AUDIO_L_o       ( AUDIO_L_o       )
+        , .AUDIO_R_o       ( AUDIO_R_o       )
+        , .TEMPO_LED_o     ( TEMPO_LED_o     )
+        , .DB_SCORE_LEDs_o ( DB_SCORE_LEDs_o )
+    ) ;
+
+    parameter C_SIM_CL = 10_000_000 ;
+    integer xx ;
+    initial
+    begin
+        xx <= 0 ;
+        START <= 0 ;
+        repeat(10) 
+            @(posedge CK) ;
+        for(xx=0;xx<C_SIM_CL;xx=xx+1)
+        begin
+            START <= ~ (xx < 10) ;
+            @(posedge CK) ;
+        end
+        $stop ;
+        $finish ;
+    end
+endmodule
+// TB_MELODY_CHIME

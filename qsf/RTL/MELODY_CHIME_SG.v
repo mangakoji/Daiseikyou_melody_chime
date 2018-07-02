@@ -24,6 +24,7 @@
 module MELODY_CHIME_SG 
 #(
     parameter integer C_ENVELOPE_TC = 28000      // エンベロープ時定数(一次遅れ系,t=0.5秒)
+    , parameter C_ENV_CTR_W = $clog2( C_ENVELOPE_TC ) 
 ) 
 (
       input             CK_i            // system clock
@@ -34,7 +35,7 @@ module MELODY_CHIME_SG
     , input tri1        EE_100KHZ_i      // clock enable (10usタイミング,1パルス幅,1アクティブ) 
     , input tri0        EE_1KHZ_i       // clock enable (1msタイミング,1パルス幅,1アクティブ) 
 
-    , output [C_ENV_CTR_W : 0]     WAVEs_o              // 波形データ出力(符号付き16bit) 
+    , output [15 : 0]     WAVEs_o              // 波形データ出力(符号付き16bit) 
 ) ;
     // 入力レジスタ 
     reg [ 7:0] DIV_LENs ;
@@ -49,7 +50,10 @@ module MELODY_CHIME_SG
         begin
             if ( WE_i )
                 DIV_LENs <= DIV_LENs_i ;
-            SOUND_ON <= (WE_i & SOUND_ON_i) ;
+            if(WE_i & SOUND_ON_i)
+                SOUND_ON <= 1 ;
+            else if( EE_1KHZ_i)
+                SOUND_ON <= 0 ;
         end
 
 
@@ -72,7 +76,6 @@ module MELODY_CHIME_SG
 
 
     // エンベロープ生成 
-    localparam C_ENV_CTR_W = $clog2( C_ENVELOPE_TC ) ;
     reg [C_ENV_CTR_W-1 : 0]  ENV_CTRs    ;
     wire [(C_ENV_CTR_W+9)-1: 0] env_cnext_val ;
     // vonext = ((vo<<9) - vo)>>9
@@ -82,13 +85,13 @@ module MELODY_CHIME_SG
         {9'b0_0000_0000 , ENV_CTRs} 
     ;
     always @(posedge CK_i or negedge XARST_i)
-        if ( ~ XARST_i) 
+        if( ~ XARST_i) 
             ENV_CTRs <= 15'd0 ;
         else
-            if ( EE_1KHZ_i )
-                if ( SOUND_ON )
+            if( EE_1KHZ_i )
+                if( SOUND_ON )
                     ENV_CTRs <= (C_ENVELOPE_TC - 1) ;
-                else if (ENV_CTRs != 0)
+                else if(ENV_CTRs != 0)
                     // vonext = ((vo<<9) - vo)>>9
                     ENV_CTRs <= env_cnext_val[9 +:15] ;
 

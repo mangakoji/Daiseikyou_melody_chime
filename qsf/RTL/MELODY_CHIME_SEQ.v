@@ -34,7 +34,7 @@ module MELODY_CHIME_SEQ
 
     , output [ 3 :0]  DB_SCORE_ADRs_o
 ) ;
-    localparam C_R      = 5'bX_XXXX ;  //  O4G+
+    localparam C_R      = 5'b0_0000 ;  //  O4G+
     localparam C_O4Gp   = 5'b0_0000 ;  //  O4G+
     localparam C_O4A    = 5'b0_0001 ;  //  O4A
     localparam C_O4Ap   = 5'b0_0010 ;  //  O4A+
@@ -191,14 +191,14 @@ module MELODY_CHIME_SEQ
             else
                 SLOT_CTRs <= SLOT_CTRs + 1;
         end
-
-
+    wire [$clog2(C_SCORE_LEN*2)-1:0] SCORE_adrs ;
+    assign SCORE_adrs = SLOT_CTRs*C_SCORE_LEN + SCORE_CTRs  ;
     // Šy•ˆ“Ç‚Ýo‚µ 
     always@(posedge CK_i or negedge XAR_i)
         if( ~ XAR_i ) 
             SCOREs <= 0 ;
         else
-            SCOREs <= f_SCOREs(  SLOT_CTRs*C_SCORE_LEN + SCORE_CTRs  ) ;
+            SCOREs <= f_SCOREs(  SCORE_adrs ) ;
 
     generate
         genvar g_i ;
